@@ -16,13 +16,4 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   box-sizing: border-box;
-  //overflow-x: hidden;
-
-  // display: grid;
-  // grid-template-rows: 3;
-  // grid-template-columns: 1;
-
-  @media screen and (max-width: 900px) {
-    padding: 0;
-  }
 }

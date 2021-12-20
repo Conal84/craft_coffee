@@ -14,6 +14,9 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   box-sizing: border-box; }
+  @media screen and (max-width: 900px) {
+    body {
+      padding: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -73,6 +76,9 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.container {
+  display: grid; }
+
 .footer {
   background-color: red;
   width: 100vw;
@@ -83,7 +89,7 @@ body {
   width: 100vw;
   height: 5vh; }
 
-.home-section {
-  background-color: palegreen;
+.hero {
   width: 100vw;
-  height: 5vh; }
+  height: 90vh;
+  background: #eee; }
