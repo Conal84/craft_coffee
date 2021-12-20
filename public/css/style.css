@@ -14,9 +14,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   box-sizing: border-box; }
-  @media screen and (max-width: 900px) {
-    body {
-      padding: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -76,9 +73,6 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
-.container {
-  display: grid; }
-
 .footer {
   background-color: red;
   width: 100vw;
@@ -89,7 +83,27 @@ body {
   width: 100vw;
   height: 5vh; }
 
-.hero {
-  width: 100vw;
-  height: 90vh;
-  background: #eee; }
+.home {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 90vh 1fr 1fr 1fr; }
+  .home__hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1; }
+    .home__hero__text {
+      background-color: powderblue; }
+    .home__hero__image {
+      background-color: steelblue; }
+  .home__bestsellers {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 2; }
+    .home__bestsellers__heading {
+      background-color: coral; }
+    .home__bestsellers__cards {
+      background-color: chocolate; }
+  .home__latest-additions {
+    background-color: peachpuff; }
+  .home__collage {
+    background-color: plum; }

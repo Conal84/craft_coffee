@@ -1,5 +1,41 @@
-.home-section {
-  background-color: palegreen;
-  width: 100vw;
-  height: 5vh;
+.home {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 90vh 1fr 1fr 1fr;
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1;
+
+    &__text {
+      background-color: powderblue;
+    }
+
+    &__image {
+      background-color: steelblue;
+    }
+  }
+
+  &__bestsellers {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 2;
+
+    &__heading {
+      background-color: coral;
+    }
+
+    &__cards {
+      background-color: chocolate;
+    }
+  }
+
+  &__latest-additions {
+    background-color: peachpuff;
+  }
+
+  &__collage {
+    background-color: plum;
+  }
 }
