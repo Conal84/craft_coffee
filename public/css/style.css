@@ -98,10 +98,14 @@ body {
   .home__bestsellers {
     display: grid;
     grid-template-columns: 4;
-    grid-template-rows: 2; }
+    grid-template-rows: 2;
+    padding: 1rem; }
     .home__bestsellers__heading {
-      background-color: coral; }
-    .home__bestsellers__cards {
+      grid-row: 1;
+      grid-column: 2 / span 2;
+      background-color: crimson; }
+    .home__bestsellers__card {
+      grid-row: 2;
       background-color: chocolate; }
   .home__latest-additions {
     background-color: peachpuff; }

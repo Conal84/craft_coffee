@@ -21,12 +21,16 @@
     display: grid;
     grid-template-columns: 4;
     grid-template-rows: 2;
+    padding: 1rem;
 
     &__heading {
-      background-color: coral;
+      grid-row: 1;
+      grid-column: 2 / span 2;
+      background-color: crimson;
     }
 
-    &__cards {
+    &__card {
+      grid-row: 2;
       background-color: chocolate;
     }
   }
