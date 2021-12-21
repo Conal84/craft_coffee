@@ -17,7 +17,7 @@
     }
   }
 
-  &__bestsellers {
+  &__products {
     display: grid;
     grid-template-columns: 4;
     grid-template-rows: 2;
@@ -35,11 +35,37 @@
     }
   }
 
-  &__latest-additions {
-    background-color: peachpuff;
-  }
-
   &__collage {
-    background-color: plum;
+    display: grid;
+    grid-template-columns: 12;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "about about about contact contact contact contact contact brew brew brew brew"
+      "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew";
+
+    &__about {
+      background-color: cyan;
+      grid-area: about;
+    }
+
+    &__contact {
+      background-color: darkblue;
+      grid-area: contact;
+    }
+
+    &__brew {
+      background-color: darkgoldenrod;
+      grid-area: brew;
+    }
+
+    &__sustain {
+      background-color: darkgray;
+      grid-area: sustain;
+    }
+
+    &__roasting {
+      background-color: darkkhaki;
+      grid-area: roasting;
+    }
   }
 }

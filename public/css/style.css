@@ -95,19 +95,35 @@ body {
       background-color: powderblue; }
     .home__hero__image {
       background-color: steelblue; }
-  .home__bestsellers {
+  .home__products {
     display: grid;
     grid-template-columns: 4;
     grid-template-rows: 2;
     padding: 1rem; }
-    .home__bestsellers__heading {
+    .home__products__heading {
       grid-row: 1;
       grid-column: 2 / span 2;
       background-color: crimson; }
-    .home__bestsellers__card {
+    .home__products__card {
       grid-row: 2;
       background-color: chocolate; }
-  .home__latest-additions {
-    background-color: peachpuff; }
   .home__collage {
-    background-color: plum; }
+    display: grid;
+    grid-template-columns: 12;
+    grid-template-rows: 2;
+    grid-template-areas: "about about about contact contact contact contact contact brew brew brew brew" "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew"; }
+    .home__collage__about {
+      background-color: cyan;
+      grid-area: about; }
+    .home__collage__contact {
+      background-color: darkblue;
+      grid-area: contact; }
+    .home__collage__brew {
+      background-color: darkgoldenrod;
+      grid-area: brew; }
+    .home__collage__sustain {
+      background-color: darkgray;
+      grid-area: sustain; }
+    .home__collage__roasting {
+      background-color: darkkhaki;
+      grid-area: roasting; }
