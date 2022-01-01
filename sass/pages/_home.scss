@@ -1,7 +1,12 @@
 .home {
+  width: 100vw;
   display: grid;
   grid-template-columns: 1;
-  grid-template-rows: 90vh 1fr 1fr 1fr;
+  grid-template-rows: 90vh 1fr 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-rows: 90vh 1fr 1fr 1fr;
+  }
 
   &__hero {
     display: grid;
@@ -22,6 +27,7 @@
     grid-template-columns: 4;
     grid-template-rows: 2;
     padding: 1rem;
+    justify-items: center;
 
     &__heading {
       grid-row: 1;
@@ -36,36 +42,78 @@
   }
 
   &__collage {
-    display: grid;
-    grid-template-columns: 12;
-    grid-template-rows: 2;
-    grid-template-areas:
-      "about about about contact contact contact contact contact brew brew brew brew"
-      "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew";
+    display: none;
+
+    /*Tablet and above Portrait View - 768px and above*/
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 12;
+      grid-template-rows: 2;
+      grid-template-areas:
+        "about about about contact contact contact contact contact"
+        "sustain sustain sustain sustain sustain sustain roasting roasting";
+    }
+
+    /*Tablet and above Landscape View - 1024px and above*/
+    @media screen and (min-width: 1024px) {
+      grid-template-areas:
+        "about about about contact contact contact contact contact brew brew brew brew"
+        "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew";
+    }
 
     &__about {
       background-color: cyan;
       grid-area: about;
+      display: none;
+
+      /*Tablet and above Portrait View - 768px and above*/
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
     }
 
     &__contact {
       background-color: darkblue;
       grid-area: contact;
+      display: none;
+
+      /*Tablet and above Portrait View - 768px and above*/
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
     }
 
     &__brew {
       background-color: darkgoldenrod;
       grid-area: brew;
+      display: none;
+
+      /*Tablet and above Landscape View - 1024px and above*/
+      @media screen and (min-width: 1024px) {
+        display: block;
+      }
     }
 
     &__sustain {
       background-color: darkgray;
       grid-area: sustain;
+      display: none;
+
+      /*Tablet and above Portrait View - 768px and above*/
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
     }
 
     &__roasting {
       background-color: darkkhaki;
       grid-area: roasting;
+      display: none;
+
+      /*Tablet and above Portrait View - 768px and above*/
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
     }
   }
 }

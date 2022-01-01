@@ -84,9 +84,13 @@ body {
   height: 5vh; }
 
 .home {
+  width: 100vw;
   display: grid;
   grid-template-columns: 1;
-  grid-template-rows: 90vh 1fr 1fr 1fr; }
+  grid-template-rows: 90vh 1fr 1fr; }
+  @media screen and (min-width: 768px) {
+    .home {
+      grid-template-rows: 90vh 1fr 1fr 1fr; } }
   .home__hero {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -99,7 +103,8 @@ body {
     display: grid;
     grid-template-columns: 4;
     grid-template-rows: 2;
-    padding: 1rem; }
+    padding: 1rem;
+    justify-items: center; }
     .home__products__heading {
       grid-row: 1;
       grid-column: 2 / span 2;
@@ -108,22 +113,55 @@ body {
       grid-row: 2;
       background-color: chocolate; }
   .home__collage {
-    display: grid;
-    grid-template-columns: 12;
-    grid-template-rows: 2;
-    grid-template-areas: "about about about contact contact contact contact contact brew brew brew brew" "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew"; }
+    display: none;
+    /*Tablet and above Portrait View - 768px and above*/
+    /*Tablet and above Landscape View - 1024px and above*/ }
+    @media screen and (min-width: 768px) {
+      .home__collage {
+        display: grid;
+        grid-template-columns: 12;
+        grid-template-rows: 2;
+        grid-template-areas: "about about about contact contact contact contact contact" "sustain sustain sustain sustain sustain sustain roasting roasting"; } }
+    @media screen and (min-width: 1024px) {
+      .home__collage {
+        grid-template-areas: "about about about contact contact contact contact contact brew brew brew brew" "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew"; } }
     .home__collage__about {
       background-color: cyan;
-      grid-area: about; }
+      grid-area: about;
+      display: none;
+      /*Tablet and above Portrait View - 768px and above*/ }
+      @media screen and (min-width: 768px) {
+        .home__collage__about {
+          display: block; } }
     .home__collage__contact {
       background-color: darkblue;
-      grid-area: contact; }
+      grid-area: contact;
+      display: none;
+      /*Tablet and above Portrait View - 768px and above*/ }
+      @media screen and (min-width: 768px) {
+        .home__collage__contact {
+          display: block; } }
     .home__collage__brew {
       background-color: darkgoldenrod;
-      grid-area: brew; }
+      grid-area: brew;
+      display: none;
+      /*Tablet and above Landscape View - 1024px and above*/ }
+      @media screen and (min-width: 1024px) {
+        .home__collage__brew {
+          display: block; } }
     .home__collage__sustain {
       background-color: darkgray;
-      grid-area: sustain; }
+      grid-area: sustain;
+      display: none;
+      /*Tablet and above Portrait View - 768px and above*/ }
+      @media screen and (min-width: 768px) {
+        .home__collage__sustain {
+          display: block; } }
     .home__collage__roasting {
       background-color: darkkhaki;
-      grid-area: roasting; }
+      grid-area: roasting;
+      display: none;
+      /*Tablet and above Portrait View - 768px and above*/ }
+      @media screen and (min-width: 768px) {
+        .home__collage__roasting {
+          display: block; } }
