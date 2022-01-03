@@ -130,20 +130,26 @@ body {
           grid-column: 1; } }
   .home__products {
     display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 3;
+    grid-template-rows: 2fr 1fr 5fr;
     padding: 1rem;
     justify-items: center; }
     .home__products__heading {
       grid-row: 1;
-      grid-column: 2 / span 2;
       background-color: crimson; }
     .home__products__hr {
-      grid-row: 2;
-      grid-column: 1 / 5; }
-    .home__products__card {
+      grid-row: 2; }
+    .home__products__container {
       grid-row: 3;
-      background-color: chocolate; }
+      background-color: chocolate;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1rem;
+      justify-items: center; }
+      .home__products__container__card {
+        background-color: darkorchid;
+        width: 20rem;
+        height: 30rem;
+        margin: 1rem; }
   .home__collage {
     display: none;
     /*Tablet and above Portrait View - 768px and above*/
