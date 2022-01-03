@@ -73,6 +73,18 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.hr {
+  height: 2px;
+  border-width: 0;
+  color: #eee;
+  background-color: #eee;
+  width: 90%;
+  margin: 2rem 0;
+  /*Tablet and above Portrait View - 768px and above*/ }
+  @media screen and (min-width: 768px) {
+    .hr {
+      width: 75%; } }
+
 .footer {
   background-color: red;
   width: 100vw;
@@ -86,31 +98,51 @@ body {
 .home {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 90vh 1fr 1fr; }
+  grid-template-rows: 90vh 1fr 1fr;
+  /*Tablet and above Portrait View - 768px and above*/ }
   @media screen and (min-width: 768px) {
     .home {
       grid-template-rows: 90vh 1fr 1fr 1fr; } }
   .home__hero {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1; }
-    .home__hero__text {
-      background-color: powderblue; }
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    /*Tablet and above Landscape View - 1024px and above*/ }
+    @media screen and (min-width: 1024px) {
+      .home__hero {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto; } }
     .home__hero__image {
-      background-color: steelblue; }
+      grid-row: 1;
+      background-color: steelblue;
+      /*Tablet and above Landscape View - 1024px and above*/ }
+      @media screen and (min-width: 1024px) {
+        .home__hero__image {
+          grid-row: 1;
+          grid-column: 2; } }
+    .home__hero__text {
+      grid-row: 2;
+      background-color: powderblue;
+      /*Tablet and above Landscape View - 1024px and above*/ }
+      @media screen and (min-width: 1024px) {
+        .home__hero__text {
+          grid-row: 1;
+          grid-column: 1; } }
   .home__products {
     display: grid;
     grid-template-columns: 4;
-    grid-template-rows: 2;
+    grid-template-rows: 3;
     padding: 1rem;
     justify-items: center; }
     .home__products__heading {
       grid-row: 1;
       grid-column: 2 / span 2;
       background-color: crimson; }
-    .home__products__card {
+    .home__products__hr {
       grid-row: 2;
+      grid-column: 1 / 5; }
+    .home__products__card {
+      grid-row: 3;
       background-color: chocolate; }
   .home__collage {
     display: none;

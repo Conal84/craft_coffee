@@ -1,31 +1,53 @@
 .home {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1;
+  //grid-template-columns: 1;
   grid-template-rows: 90vh 1fr 1fr;
 
+  /*Tablet and above Portrait View - 768px and above*/
   @media screen and (min-width: 768px) {
     grid-template-rows: 90vh 1fr 1fr 1fr;
   }
 
   &__hero {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1;
+    //grid-template-columns: 1;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
 
-    &__text {
-      background-color: powderblue;
+    /*Tablet and above Landscape View - 1024px and above*/
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto;
     }
 
     &__image {
+      grid-row: 1;
       background-color: steelblue;
+
+      /*Tablet and above Landscape View - 1024px and above*/
+      @media screen and (min-width: 1024px) {
+        grid-row: 1;
+        grid-column: 2;
+      }
+    }
+
+    &__text {
+      grid-row: 2;
+      background-color: powderblue;
+
+      /*Tablet and above Landscape View - 1024px and above*/
+      @media screen and (min-width: 1024px) {
+        grid-row: 1;
+        grid-column: 1;
+      }
     }
   }
 
   &__products {
     display: grid;
     grid-template-columns: 4;
-    grid-template-rows: 2;
+    grid-template-rows: 3;
     padding: 1rem;
     justify-items: center;
 
@@ -35,8 +57,13 @@
       background-color: crimson;
     }
 
-    &__card {
+    &__hr {
       grid-row: 2;
+      grid-column: 1 / 5;
+    }
+
+    &__card {
+      grid-row: 3;
       background-color: chocolate;
     }
   }
