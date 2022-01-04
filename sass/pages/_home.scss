@@ -46,7 +46,7 @@
 
   &__products {
     display: grid;
-    grid-template-rows: 2fr 1fr 5fr;
+    grid-template-rows: 1fr 1fr 5fr;
     padding: 1rem;
     justify-items: center;
 
@@ -63,15 +63,18 @@
       grid-row: 3;
       background-color: chocolate;
 
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 1rem;
-      justify-items: center;
+      // display: grid;
+      // grid-template-columns: repeat(4, 1fr);
+      //padding: 1rem;
+      display: flex;
+      overflow-x: auto;
+      //white-space: nowrap;
 
       &__card {
         background-color: darkorchid;
-        width: 20rem;
-        height: 30rem;
+        //display: inline-block;
+        width: 40rem;
+        height: 60rem;
         margin: 1rem;
       }
     }

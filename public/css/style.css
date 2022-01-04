@@ -130,7 +130,7 @@ body {
           grid-column: 1; } }
   .home__products {
     display: grid;
-    grid-template-rows: 2fr 1fr 5fr;
+    grid-template-rows: 1fr 1fr 5fr;
     padding: 1rem;
     justify-items: center; }
     .home__products__heading {
@@ -141,14 +141,12 @@ body {
     .home__products__container {
       grid-row: 3;
       background-color: chocolate;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 1rem;
-      justify-items: center; }
+      display: flex;
+      overflow-x: auto; }
       .home__products__container__card {
         background-color: darkorchid;
-        width: 20rem;
-        height: 30rem;
+        width: 40rem;
+        height: 60rem;
         margin: 1rem; }
   .home__collage {
     display: none;
