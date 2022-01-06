@@ -1,7 +1,6 @@
 .home {
   width: 100vw;
   display: grid;
-  //grid-template-columns: 1;
   grid-template-rows: 90vh 1fr 1fr;
 
   /*Tablet and above Portrait View - 768px and above*/
@@ -11,7 +10,6 @@
 
   &__hero {
     display: grid;
-    //grid-template-columns: 1;
     grid-template-rows: 2fr 1fr;
     align-items: center;
 
@@ -54,7 +52,6 @@
       grid-row: 1;
       background-color: crimson;
       justify-self: center;
-      //align-self: center;
     }
 
     &__hr {
@@ -73,7 +70,7 @@
       grid-template-columns: 40rem;
       grid-auto-flow: column;
       grid-auto-columns: 40rem;
-      overflow-x: scroll;
+      overflow-x: auto;
 
       /*Tablet and above Landscape View - 1000px and above*/
       @media screen and (min-width: 1300px) {

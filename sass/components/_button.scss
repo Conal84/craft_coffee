@@ -1,0 +1,49 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 1.5rem;
+    transition: all 0.2s;
+
+    cursor: pointer;
+
+    // @media screen and (max-width: 900px) {
+    //   padding: 1rem 2.5rem;
+    // }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
+
+  &--cta {
+    background-color: $color-btn-cta;
+    color: $color-black;
+    border: none;
+  }
+
+  &--primary {
+    background-color: $color-btn-primary;
+    color: $color-white;
+    border: none;
+  }
+
+  &--secondary {
+    background-color: $color-white;
+    color: $color-btn-secondary;
+    border: 1px solid $color-btn-secondary;
+  }
+}
