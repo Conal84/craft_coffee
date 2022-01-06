@@ -33,6 +33,7 @@
     &__text {
       grid-row: 2;
       background-color: powderblue;
+      padding-left: 4rem;
 
       /*Tablet and above Landscape View - 1024px and above*/
       @media screen and (min-width: 1024px) {
@@ -78,15 +79,16 @@
       }
 
       &::-webkit-scrollbar {
-        height: 12px;
-        border: 1px solid #d5d5d5;
+        height: 8px;
+        border: 1px solid $color-btn-primary;
 
         &-track {
-          background: #000;
+          background: $color-white;
+          width: 50%;
         }
 
         &-thumb {
-          background: #fff;
+          background: $color-btn-primary;
         }
       }
 

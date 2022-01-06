@@ -157,6 +157,7 @@ body {
     .home__hero__text {
       grid-row: 2;
       background-color: powderblue;
+      padding-left: 4rem;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1024px) {
         .home__hero__text {
@@ -190,12 +191,13 @@ body {
         .home__products__container {
           grid-template-columns: repeat(4, 1fr); } }
       .home__products__container::-webkit-scrollbar {
-        height: 12px;
-        border: 1px solid #d5d5d5; }
+        height: 8px;
+        border: 1px solid #b08e83; }
         .home__products__container::-webkit-scrollbar-track {
-          background: #000; }
+          background: #fff;
+          width: 50%; }
         .home__products__container::-webkit-scrollbar-thumb {
-          background: #fff; }
+          background: #b08e83; }
       .home__products__container__card {
         background-color: darkorchid; }
   .home__collage {
