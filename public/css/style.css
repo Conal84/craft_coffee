@@ -130,8 +130,9 @@ body {
           grid-column: 1; } }
   .home__products {
     display: grid;
-    grid-template-rows: 1fr 1fr 5fr;
-    padding: 1rem; }
+    grid-template-rows: 0.75fr 0.75fr 5fr;
+    padding: 1rem;
+    align-items: center; }
     .home__products__heading {
       grid-row: 1;
       background-color: crimson;
@@ -142,12 +143,25 @@ body {
     .home__products__container {
       grid-row: 3;
       background-color: chocolate;
+      padding: 5rem 5rem;
       display: grid;
       grid-gap: 2rem;
-      grid-template-columns: 400px 200px;
+      grid-template-rows: 50rem;
+      grid-template-columns: 40rem;
       grid-auto-flow: column;
-      grid-auto-columns: 200px;
-      overflow-x: scroll; }
+      grid-auto-columns: 40rem;
+      overflow-x: scroll;
+      /*Tablet and above Landscape View - 1000px and above*/ }
+      @media screen and (min-width: 1300px) {
+        .home__products__container {
+          grid-template-columns: repeat(4, 1fr); } }
+      .home__products__container::-webkit-scrollbar {
+        height: 12px;
+        border: 1px solid #d5d5d5; }
+        .home__products__container::-webkit-scrollbar-track {
+          background: #000; }
+        .home__products__container::-webkit-scrollbar-thumb {
+          background: #fff; }
       .home__products__container__card {
         background-color: darkorchid; }
   .home__collage {

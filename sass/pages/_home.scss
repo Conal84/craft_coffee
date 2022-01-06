@@ -46,14 +46,15 @@
 
   &__products {
     display: grid;
-    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-rows: 0.75fr 0.75fr 5fr;
     padding: 1rem;
-    //justify-items: center;
+    align-items: center;
 
     &__heading {
       grid-row: 1;
       background-color: crimson;
       justify-self: center;
+      //align-self: center;
     }
 
     &__hr {
@@ -64,20 +65,33 @@
     &__container {
       grid-row: 3;
       background-color: chocolate;
-      //padding: 0 3rem;
+      padding: 5rem 5rem;
 
       display: grid;
       grid-gap: 2rem;
-      //grid-template-rows: 60rem;
-      grid-template-columns: 400px 200px;
+      grid-template-rows: 50rem;
+      grid-template-columns: 40rem;
       grid-auto-flow: column;
-      grid-auto-columns: 200px;
+      grid-auto-columns: 40rem;
       overflow-x: scroll;
 
-      // /*Tablet and above Landscape View - 1740px and above*/
-      // @media screen and (min-width: 1740px) {
-      //   grid-template-columns: repeat(4, 40rem);
-      // }
+      /*Tablet and above Landscape View - 1000px and above*/
+      @media screen and (min-width: 1300px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      &::-webkit-scrollbar {
+        height: 12px;
+        border: 1px solid #d5d5d5;
+
+        &-track {
+          background: #000;
+        }
+
+        &-thumb {
+          background: #fff;
+        }
+      }
 
       &__card {
         background-color: darkorchid;
