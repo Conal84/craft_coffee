@@ -80,15 +80,20 @@
 
       &::-webkit-scrollbar {
         height: 8px;
-        border: 1px solid $color-btn-primary;
+        border: 1px solid $color-secondary;
 
         &-track {
-          background: $color-white;
-          width: 50%;
+          border-radius: 10px;
+          box-shadow: inset 0 0 10px rgba($color-grey-light-2, 0.25);
         }
 
         &-thumb {
-          background: $color-btn-primary;
+          background: $color-secondary;
+          border-radius: 10px;
+        }
+
+        &-thumb:hover {
+          background: $color-secondary-dark;
         }
       }
 

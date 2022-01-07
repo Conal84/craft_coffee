@@ -1,11 +1,27 @@
-nav.navbar
-  //-     a.nav__el(href='/') Craft Coffee
-  //- nav.nav.nav--user
-  //-   if user
-  //-     a.nav__el.nav__el--logout Log out
-  //-     a.nav__el(href="/me")
-  //-       img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`)
-  //-       span= user.name.split(' ')[0]
-  //-   else
-  //-     a.nav__el(href='/login') Log in
-  //-     button.nav__el.nav__el--cta Sign up
+nav.nav
+  .nav__left
+    a.nav__banner(href='/') Craft Coffee 
+      i.nav__fas.fas.fa-coffee
+  .nav__right
+    ul.nav__list 
+      li.nav__list__item Shop
+        a.nav__link(href='#') 
+      li.nav__list__item About
+        ul.nav__list__item__drop 
+          li Our Story 
+          li Contact Us
+      li.nav__list__item Learn
+        ul.nav__list__item__drop 
+          li Brew Methods
+          li Roast Types 
+          li Sustainability 
+          li Roasting
+      li.nav__list__item
+        a.nav__link(href='#')
+          i.nav__fas.fas.fa-search
+      li.nav__list__item
+        a.nav__link(href='#')
+          i.nav__fas.fas.fa-user 
+      li.nav__list__item
+        a.nav__link(href='#')
+          i.nav__fas.fas.fa-shopping-cart

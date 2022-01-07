@@ -1,5 +1,102 @@
-.navbar {
-  background-color: blue;
+.nav {
+  background-color: cornsilk; // Change this
   width: 100vw;
   height: 5vh;
+
+  display: flex;
+  align-items: center;
+
+  &__left {
+    margin-left: $margin-sm;
+  }
+
+  &__banner {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  &__fas {
+    color: $color-black;
+    font-size: 2rem;
+    margin: 0 5px;
+  }
+
+  &__right {
+    margin-left: auto;
+    margin-right: $margin-sm;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &__item {
+      list-style: none;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 0.3rem;
+        border-radius: 3px;
+        position: absolute;
+        left: 1rem;
+        bottom: 0.8rem;
+        background-color: $color-white;
+        transition: width 200ms ease-in;
+      }
+
+      &:hover ::after,
+      &:focus::after {
+        width: 80%;
+      }
+
+      &:hover ul,
+      &:focus ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__drop {
+        position: absolute;
+        top: 2.5rem;
+        left: -1rem;
+        box-shadow: 0 0 10px $color-grey-light-1;
+        background-color: $color-white;
+        width: 12rem;
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+
+        li {
+          list-style: none;
+          padding: 0.5rem 1rem;
+          transition: background-color 200ms ease-in-out;
+
+          &:hover,
+          &:focus {
+            background-color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-white;
+  }
 }
