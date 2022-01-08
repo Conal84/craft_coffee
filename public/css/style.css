@@ -172,8 +172,8 @@ body {
         transition: width 200ms ease-in; }
       .nav__list__item:hover::after, .nav__list__item:focus::after {
         width: 100%; }
-      .nav__list__item:hover ul,
-      .nav__list__item:focus ul {
+      .nav__list__item:hover .nav__list__item__drop,
+      .nav__list__item:focus .nav__list__item__drop {
         opacity: 1;
         visibility: visible; }
       .nav__list__item__link {
@@ -187,7 +187,7 @@ body {
         top: 5vh;
         left: -1rem;
         background-color: #422417;
-        width: 12rem;
+        width: 14rem;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -198,12 +198,37 @@ body {
         .nav__list__item__drop--account {
           left: -4rem;
           width: 11rem; }
+    .nav__list__subitem {
+      list-style: none;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.4rem; }
+      .nav__list__subitem:hover .nav__list__subitem__drop,
+      .nav__list__subitem:focus .nav__list__subitem__drop {
+        opacity: 1;
+        visibility: visible; }
+      .nav__list__subitem__text {
+        font-size: 1.4rem; }
+      .nav__list__subitem__drop {
+        position: absolute;
+        top: 0px;
+        left: 13rem;
+        background-color: #422417;
+        width: 14rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out; }
   .nav__link {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 700;
     color: #fff;
-    list-style: none;
     transition: background-color 200ms ease-in-out; }
     .nav__link:hover, .nav__link:focus {
       background-color: #b08e83; }

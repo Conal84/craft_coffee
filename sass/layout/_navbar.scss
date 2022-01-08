@@ -63,8 +63,8 @@
         width: 100%;
       }
 
-      &:hover ul,
-      &:focus ul {
+      &:hover &__drop,
+      &:focus &__drop {
         opacity: 1;
         visibility: visible;
       }
@@ -84,7 +84,7 @@
         top: 5vh;
         left: -1rem;
         background-color: $color-primary;
-        width: 12rem;
+        width: 14rem;
         padding: 1rem;
 
         display: flex;
@@ -101,6 +101,43 @@
         }
       }
     }
+
+    &__subitem {
+      list-style: none;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+      color: $color-white;
+      font-size: 1.4rem;
+
+      &:hover &__drop,
+      &:focus &__drop {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__text {
+        font-size: 1.4rem;
+      }
+
+      &__drop {
+        position: absolute;
+        top: 0px;
+        left: 13rem;
+
+        background-color: $color-primary;
+        width: 14rem;
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+      }
+    }
   }
 
   &__link {
@@ -108,7 +145,7 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: $color-white;
-    list-style: none;
+    //list-style: none;
     transition: background-color 200ms ease-in-out;
 
     &:hover,
