@@ -44,6 +44,7 @@
       cursor: pointer;
       color: $color-white;
       display: flex;
+      align-items: center;
 
       &::after {
         content: "";
@@ -72,12 +73,10 @@
         text-decoration: none;
         color: $color-white;
         list-style: none;
-        align-self: center;
       }
 
       &__text {
         color: $color-white;
-        align-self: center;
       }
 
       &__drop {
@@ -85,7 +84,7 @@
         top: 5vh;
         left: -1rem;
         background-color: $color-primary;
-        width: 16rem;
+        width: 12rem;
         padding: 1rem;
 
         display: flex;
@@ -95,18 +94,21 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 200ms ease-in-out;
+
+        &--account {
+          left: -4rem;
+          width: 11rem;
+        }
       }
     }
   }
 
   &__link {
     text-decoration: none;
-    margin: 0 5px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: $color-white;
     list-style: none;
-    padding: 0.5rem;
     transition: background-color 200ms ease-in-out;
 
     &:hover,
