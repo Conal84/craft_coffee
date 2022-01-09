@@ -85,8 +85,8 @@
         left: -1rem;
         background-color: $color-primary;
         width: 14rem;
-        padding: 1rem;
-
+        padding-left: 1rem;
+        list-style: none;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -109,6 +109,7 @@
       cursor: pointer;
       color: $color-white;
       font-size: 1.4rem;
+      width: 100%;
 
       &:hover &__drop,
       &:focus &__drop {
@@ -122,9 +123,9 @@
 
       &__drop {
         position: absolute;
-        top: 0px;
+        top: -1rem;
         left: 13rem;
-
+        list-style: none;
         background-color: $color-primary;
         width: 14rem;
         padding: 1rem;

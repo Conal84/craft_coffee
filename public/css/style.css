@@ -188,7 +188,8 @@ body {
         left: -1rem;
         background-color: #422417;
         width: 14rem;
-        padding: 1rem;
+        padding-left: 1rem;
+        list-style: none;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -204,7 +205,8 @@ body {
       position: relative;
       cursor: pointer;
       color: #fff;
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      width: 100%; }
       .nav__list__subitem:hover .nav__list__subitem__drop,
       .nav__list__subitem:focus .nav__list__subitem__drop {
         opacity: 1;
@@ -213,8 +215,9 @@ body {
         font-size: 1.4rem; }
       .nav__list__subitem__drop {
         position: absolute;
-        top: 0px;
+        top: -1rem;
         left: 13rem;
+        list-style: none;
         background-color: #422417;
         width: 14rem;
         padding: 1rem;

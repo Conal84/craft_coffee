@@ -18,8 +18,15 @@ nav.nav
                 a.nav__link(href='#') Filter
               li
                 a.nav__link(href='#') Espresso
-          li
-            a.nav__link(href='#') By Roast Type
+          li.nav__list__subitem 
+            span.nav__list__subitem__text By Roast Type
+            ul.nav__list__subitem__drop
+              li
+                a.nav__link(href='#') Light
+              li
+                a.nav__link(href='#') Medium
+              li
+                a.nav__link(href='#') Dark
           li
             a.nav__link(href='#') All Coffees
           li
@@ -45,10 +52,15 @@ nav.nav
           li
             a.nav__link(href='#') Roasting
       li.nav__list__item
-        a.nav__list__item__link(href='#')
-          i.nav__fas.fas.fa-search
+        i.nav__fas.fas.fa-search
+        ul.nav__list__item__drop.nav__list__item__drop--account
+          li
+            form.form.nav__form(method='GET' action='#')
+              input.nav__form__input(type='search' name='nav-search' placeholder='Search')
+              button.nav__form__btn(type='submit')
+                i.nav__fas.fas.fa-search
       li.nav__list__item
-        i.nav__fas.fas.fa-user 
+        i.nav__fas.fas.fa-user
         ul.nav__list__item__drop.nav__list__item__drop--account
           li
             a.nav__link(href='#') Login / Signup
