@@ -1,5 +1,35 @@
 .footer {
-  background-color: red;
+  background-color: $color-primary;
   width: 100vw;
   height: 5vh;
+
+  display: flex;
+  align-items: center;
+
+  &--left {
+    margin-left: $margin-sm;
+  }
+
+  &--right {
+    margin-left: auto;
+    margin-right: $margin-sm;
+  }
+
+  &__text {
+    color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+
+    &__item {
+      list-style: none;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
