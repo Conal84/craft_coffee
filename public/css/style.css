@@ -107,6 +107,12 @@ body {
   color: #422417;
   border: 1px solid #422417; }
 
+.form input {
+  border: 1px solid #f7f7f7;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.75rem; }
+
 .hr {
   height: 2px;
   border-width: 0;
@@ -199,6 +205,10 @@ body {
         .nav__list__item__drop--account {
           left: -4rem;
           width: 11rem; }
+        .nav__list__item__drop--search {
+          left: -16rem;
+          width: 24rem;
+          padding: 1rem; }
     .nav__list__subitem {
       list-style: none;
       font-weight: 700;
@@ -235,6 +245,23 @@ body {
     transition: background-color 200ms ease-in-out; }
     .nav__link:hover, .nav__link:focus {
       background-color: #b08e83; }
+  .nav__form {
+    display: flex;
+    justify-content: center; }
+    .nav__form--container {
+      background-color: #fff; }
+    .nav__form--input {
+      width: 15rem;
+      border: none; }
+      .nav__form--input::placeholder {
+        color: #422417;
+        font-weight: bold; }
+    .nav__form--btn {
+      background: transparent;
+      border: none; }
+    .nav__form--icon {
+      color: #422417;
+      cursor: pointer; }
 
 .home {
   width: 100vw;

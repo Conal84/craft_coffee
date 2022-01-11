@@ -99,6 +99,12 @@
           left: -4rem;
           width: 11rem;
         }
+
+        &--search {
+          left: -16rem;
+          width: 24rem;
+          padding: 1rem;
+        }
       }
     }
 
@@ -152,6 +158,35 @@
     &:hover,
     &:focus {
       background-color: $color-secondary;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+
+    &--container {
+      background-color: $color-white;
+    }
+
+    &--input {
+      width: 15rem;
+      border: none;
+
+      &::placeholder {
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+
+    &--btn {
+      background: transparent;
+      border: none;
+    }
+
+    &--icon {
+      color: $color-primary;
+      cursor: pointer;
     }
   }
 }
