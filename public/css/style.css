@@ -111,8 +111,33 @@ body {
   height: 50rem;
   width: 40rem;
   background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12); }
+  border-radius: 5rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer; }
+  .card__top {
+    background-color: greenyellow;
+    height: 60%;
+    border-radius: 5rem 5rem 0 0; }
+  .card__product {
+    background-color: khaki;
+    border-radius: 0 0 5rem 5rem;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .card__product__name {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-top: 2rem; }
+    .card__product__description {
+      color: #999;
+      padding: 2rem 5rem 0 5rem;
+      align-self: flex-start; }
+    .card__product__price {
+      color: #b08e83;
+      font-style: italic;
+      padding-left: 5rem;
+      align-self: flex-start; }
 
 .form input {
   border: 1px solid #f7f7f7;
@@ -131,6 +156,8 @@ body {
   @media screen and (min-width: 768px) {
     .hr {
       width: 75%; } }
+  .hr__sm {
+    width: 75%; }
 
 .fas {
   color: #fff;
@@ -139,7 +166,7 @@ body {
 
 .fab {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0 5px; }
 
 .footer {
@@ -351,6 +378,7 @@ body {
       grid-template-columns: 40rem;
       grid-auto-flow: column;
       grid-auto-columns: 40rem;
+      overflow-y: hidden;
       overflow-x: auto;
       /*Tablet and above Landscape View - 1000px and above*/ }
       @media screen and (min-width: 1300px) {
@@ -360,15 +388,17 @@ body {
         height: 8px;
         border: 1px solid #b08e83; }
         .home__products__container::-webkit-scrollbar-track {
-          border-radius: 10px;
+          border-radius: 1rem;
           box-shadow: inset 0 0 10px rgba(238, 238, 238, 0.25); }
         .home__products__container::-webkit-scrollbar-thumb {
           background: #b08e83;
-          border-radius: 10px; }
+          border-radius: 1rem; }
         .home__products__container::-webkit-scrollbar-thumb:hover {
           background: #9b776d; }
       .home__products__container__card {
-        background-color: darkorchid; }
+        background-color: darkorchid;
+        display: grid;
+        justify-items: center; }
   .home__collage {
     display: none;
     /*Tablet and above Portrait View - 768px and above*/

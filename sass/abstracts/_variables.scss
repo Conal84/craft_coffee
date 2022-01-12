@@ -20,10 +20,10 @@ $color-btn-secondary: #422417;
 $default-font-size: 1.6rem;
 
 // Padding
-$pad-xs: 5rem;
-$pad-sm: 10rem;
-$pad-md: 20rem;
-$pad-lg: 30rem;
+$pad-xs: 1rem;
+$pad-sm: 2rem;
+$pad-md: 5rem;
+$pad-lg: 10rem;
 
 // Margin
 $margin-xs: 1rem;
@@ -32,7 +32,9 @@ $margin-md: 3rem;
 $margin-lg: 5rem;
 
 // Border radius
-$radius: 0.5rem;
+$radius-sm: 0.5rem;
+$radius-md: 1rem;
+$radius-lg: 5rem;
 
 // Box shadow
 $box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
