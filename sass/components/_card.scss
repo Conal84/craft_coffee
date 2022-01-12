@@ -5,11 +5,23 @@
   border-radius: $radius-lg;
   box-shadow: $box-shadow;
   cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+  }
+
+  &:hover &__top {
+    clip-path: ellipse(50% 35% at top);
+  }
 
   &__top {
     background-color: greenyellow;
     height: 60%;
     border-radius: $radius-lg $radius-lg 0 0;
+    clip-path: ellipse(0% 0% at top);
+    transition: clip-path 0.2s ease-in-out;
   }
 
   &__product {

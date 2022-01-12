@@ -113,11 +113,19 @@ body {
   background-color: #fff;
   border-radius: 5rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s; }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .card:hover .card__top {
+    clip-path: ellipse(50% 35% at top); }
   .card__top {
     background-color: greenyellow;
     height: 60%;
-    border-radius: 5rem 5rem 0 0; }
+    border-radius: 5rem 5rem 0 0;
+    clip-path: ellipse(0% 0% at top);
+    transition: clip-path 0.2s ease-in-out; }
   .card__product {
     background-color: khaki;
     border-radius: 0 0 5rem 5rem;
