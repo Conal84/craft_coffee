@@ -178,9 +178,20 @@ body {
     text-decoration: none;
     color: #fff; }
   .nav__right {
+    display: none;
     margin-left: auto;
     margin-right: 2rem;
     height: 100%; }
+    @media screen and (min-width: 568px) {
+      .nav__right {
+        display: block; } }
+    .nav__right--burger {
+      display: flex;
+      align-items: center;
+      cursor: pointer; }
+      @media screen and (min-width: 568px) {
+        .nav__right--burger {
+          display: none; } }
   .nav__list {
     display: flex;
     align-items: center;

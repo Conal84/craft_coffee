@@ -18,9 +18,26 @@
   }
 
   &__right {
+    display: none;
     margin-left: auto;
     margin-right: $margin-sm;
     height: 100%;
+
+    // Small devices 568px and above
+    @media screen and (min-width: 568px) {
+      display: block;
+    }
+
+    &--burger {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      // Small devices 568px and above
+      @media screen and (min-width: 568px) {
+        display: none;
+      }
+    }
   }
 
   &__list {
