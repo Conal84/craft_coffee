@@ -37,6 +37,10 @@
       @media screen and (min-width: 568px) {
         display: none;
       }
+
+      &:active .nav__right {
+        display: block;
+      }
     }
   }
 

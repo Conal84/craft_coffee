@@ -192,6 +192,8 @@ body {
       @media screen and (min-width: 568px) {
         .nav__right--burger {
           display: none; } }
+      .nav__right--burger:active .nav__right {
+        display: block; }
   .nav__list {
     display: flex;
     align-items: center;
