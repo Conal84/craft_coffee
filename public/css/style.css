@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Poiret+One&display=swap");
 *,
 *::after,
 *::before {
@@ -9,74 +10,37 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Poiret One", cursive;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   box-sizing: border-box; }
 
 .heading-primary {
+  font-family: "Arya", sans-serif;
   color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  text-align: center; }
-  @media screen and (max-width: 900px) {
-    .heading-primary {
-      margin-bottom: 3rem; } }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 5s;
-    animation-timing-function: ease-out; }
-    @media screen and (max-width: 900px) {
-      .heading-primary--main {
-        font-size: 3rem;
-        letter-spacing: 2rem; } }
-    @media screen and (max-width: 500px) {
-      .heading-primary--main {
-        letter-spacing: 1.5rem;
-        font-size: 2.5rem; } }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 2s ease-out; }
-    @media screen and (max-width: 900px) {
-      .heading-primary--sub {
-        font-size: 1rem;
-        letter-spacing: 0.75rem; } }
+  font-size: 5rem;
+  font-weight: 700; }
 
 .heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block; }
-  @media screen and (max-width: 500px) {
-    .heading-secondary {
-      font-size: 2.5rem; } }
-  @media screen and (max-width: 320px) {
-    .heading-secondary {
-      font-size: 2rem; } }
+  font-family: "Arya", sans-serif;
+  font-size: 3rem; }
 
 .heading-tertiary {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1rem 0; }
+  font-family: "Arya", sans-serif;
+  font-size: 2rem; }
 
 .paragraph {
   font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+  .paragraph--italic {
+    color: #422417;
+    font-size: 2rem;
+    font-style: italic; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Arya", sans-serif;
   padding: 1.5rem 3rem;
   display: inline-block;
   border-radius: 1.5rem;
@@ -93,6 +57,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn--cta {
+  font-weight: 700;
   background-color: #fff05a;
   color: #000;
   border: none; }
@@ -125,7 +90,7 @@ body {
     height: 60%;
     border-radius: 5rem 5rem 0 0;
     clip-path: ellipse(0% 0% at top);
-    transition: clip-path 0.2s ease-in-out; }
+    transition: clip-path 0.4s ease-in-out; }
   .card__product {
     background-color: khaki;
     border-radius: 0 0 5rem 5rem;
@@ -142,8 +107,6 @@ body {
       padding: 2rem 5rem 0 5rem;
       align-self: flex-start; }
     .card__product__price {
-      color: #b08e83;
-      font-style: italic;
       padding-left: 5rem;
       align-self: flex-start; }
 

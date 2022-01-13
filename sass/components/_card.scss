@@ -21,7 +21,7 @@
     height: 60%;
     border-radius: $radius-lg $radius-lg 0 0;
     clip-path: ellipse(0% 0% at top);
-    transition: clip-path 0.2s ease-in-out;
+    transition: clip-path 0.4s ease-in-out;
   }
 
   &__product {
@@ -45,8 +45,6 @@
     }
 
     &__price {
-      color: $color-secondary;
-      font-style: italic;
       padding-left: $pad-md;
       align-self: flex-start;
     }

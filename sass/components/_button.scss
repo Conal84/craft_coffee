@@ -4,7 +4,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
+    font-family: "Arya", sans-serif;
     padding: 1.5rem 3rem;
     display: inline-block;
     border-radius: 1.5rem;
@@ -30,6 +30,7 @@
   }
 
   &--cta {
+    font-weight: 700;
     background-color: $color-btn-cta;
     color: $color-black;
     border: none;

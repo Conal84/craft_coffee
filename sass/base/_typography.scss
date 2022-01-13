@@ -1,73 +1,26 @@
 .heading-primary {
+  font-family: "Arya", sans-serif;
   color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  text-align: center;
-
-  @media screen and (max-width: 900px) {
-    margin-bottom: 3rem;
-  }
-
-  &--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 5s;
-    animation-timing-function: ease-out;
-
-    @media screen and (max-width: 900px) {
-      font-size: 3rem;
-      letter-spacing: 2rem;
-    }
-
-    @media screen and (max-width: 500px) {
-      letter-spacing: 1.5rem;
-      font-size: 2.5rem;
-    }
-  }
-
-  &--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 2s ease-out;
-
-    @media screen and (max-width: 900px) {
-      font-size: 1rem;
-      letter-spacing: 0.75rem;
-    }
-  }
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.5rem;
-  }
-
-  @media screen and (max-width: 320px) {
-    font-size: 2rem;
-  }
+  font-family: "Arya", sans-serif;
+  font-size: 3rem;
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1rem 0;
+  font-family: "Arya", sans-serif;
+  font-size: 2rem;
 }
 
 .paragraph {
   font-size: $default-font-size;
 
-  &:not(:last-child) {
-    margin-bottom: 3rem;
+  &--italic {
+    color: $color-primary;
+    font-size: 2rem;
+    font-style: italic;
   }
 }
