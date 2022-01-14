@@ -8,6 +8,7 @@
 
   &__left {
     margin-left: $margin-sm;
+    position: relative;
   }
 
   &__banner {
@@ -17,30 +18,38 @@
     color: $color-white;
   }
 
-  &__right {
-    display: none;
+  &__burger {
+    display: flex;
     margin-left: auto;
     margin-right: $margin-sm;
     height: 100%;
+    align-items: center;
+    cursor: pointer;
+
+    // Small devices 568px and above
+    @media screen and (min-width: 568px) {
+      display: none;
+    }
+  }
+
+  &__sidenav {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    background-color: $color-primary;
+  }
+
+  &__text {
+    display: none;
 
     // Small devices 568px and above
     @media screen and (min-width: 568px) {
       display: block;
-    }
-
-    &--burger {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-
-      // Small devices 568px and above
-      @media screen and (min-width: 568px) {
-        display: none;
-      }
-
-      &:active .nav__right {
-        display: block;
-      }
+      margin-left: auto;
+      margin-right: $margin-sm;
+      height: 100%;
     }
   }
 
