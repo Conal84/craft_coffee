@@ -1,0 +1,39 @@
+.sidenav {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  height: max-content;
+  width: 160px;
+  background-color: $color-primary;
+
+  transition: opacity 2000ms ease-in-out;
+
+  &__list {
+    margin-left: $margin-sm;
+
+    &__item {
+      height: 100%;
+      list-style: none;
+      font-weight: 700;
+
+      &__link {
+        color: $color-white;
+        text-decoration: none;
+      }
+
+      &__text {
+        color: $color-white;
+      }
+
+      &__drop {
+        margin-left: $margin-sm;
+        list-style: none;
+
+        &link {
+          color: $color-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

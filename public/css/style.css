@@ -191,17 +191,10 @@ body {
     @media screen and (min-width: 568px) {
       .nav__burger {
         display: none; } }
-  .nav__sidenav {
-    position: absolute;
-    top: 5vh;
-    left: 0;
-    height: 200px;
-    width: 200px;
-    background-color: #422417; }
-  .nav__text {
+  .nav__right {
     display: none; }
     @media screen and (min-width: 568px) {
-      .nav__text {
+      .nav__right {
         display: block;
         margin-left: auto;
         margin-right: 2rem;
@@ -317,6 +310,32 @@ body {
     .nav__form--icon {
       color: #422417;
       cursor: pointer; }
+
+.sidenav {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  height: max-content;
+  width: 160px;
+  background-color: #422417;
+  transition: opacity 2000ms ease-in-out; }
+  .sidenav__list {
+    margin-left: 2rem; }
+    .sidenav__list__item {
+      height: 100%;
+      list-style: none;
+      font-weight: 700; }
+      .sidenav__list__item__link {
+        color: #fff;
+        text-decoration: none; }
+      .sidenav__list__item__text {
+        color: #fff; }
+      .sidenav__list__item__drop {
+        margin-left: 2rem;
+        list-style: none; }
+        .sidenav__list__item__droplink {
+          color: #fff;
+          text-decoration: none; }
 
 .home {
   width: 100vw;

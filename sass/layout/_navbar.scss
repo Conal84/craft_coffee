@@ -32,16 +32,7 @@
     }
   }
 
-  &__sidenav {
-    position: absolute;
-    top: 5vh;
-    left: 0;
-    height: 200px;
-    width: 200px;
-    background-color: $color-primary;
-  }
-
-  &__text {
+  &__right {
     display: none;
 
     // Small devices 568px and above
