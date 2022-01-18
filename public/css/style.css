@@ -314,11 +314,13 @@ body {
 .sidenav {
   position: absolute;
   top: 5vh;
-  left: 0;
+  left: -160px;
   height: max-content;
   width: 160px;
   background-color: #422417;
-  transition: opacity 2000ms ease-in-out; }
+  transition: left 500ms ease-in-out; }
+  .sidenav__active {
+    left: 0; }
   .sidenav__list {
     margin-left: 2rem; }
     .sidenav__list__item {
@@ -329,10 +331,18 @@ body {
         color: #fff;
         text-decoration: none; }
       .sidenav__list__item__text {
-        color: #fff; }
+        color: #fff;
+        position: relative; }
       .sidenav__list__item__drop {
         margin-left: 2rem;
-        list-style: none; }
+        list-style: none;
+        opacity: 0;
+        height: 0;
+        transition: height 0ms 400ms, opacity 400ms 0ms; }
+        .sidenav__list__item__drop__active {
+          opacity: 1;
+          height: 115px;
+          transition: height 0ms 0ms, opacity 600ms 0ms; }
         .sidenav__list__item__droplink {
           color: #fff;
           text-decoration: none; }

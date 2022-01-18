@@ -1,12 +1,16 @@
 .sidenav {
   position: absolute;
   top: 5vh;
-  left: 0;
+  left: -160px;
   height: max-content;
   width: 160px;
   background-color: $color-primary;
 
-  transition: opacity 2000ms ease-in-out;
+  transition: left 500ms ease-in-out;
+
+  &__active {
+    left: 0;
+  }
 
   &__list {
     margin-left: $margin-sm;
@@ -23,11 +27,23 @@
 
       &__text {
         color: $color-white;
+        position: relative;
       }
 
       &__drop {
         margin-left: $margin-sm;
         list-style: none;
+        //visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: height 0ms 400ms, opacity 400ms 0ms;
+
+        &__active {
+          //visibility: visible;
+          opacity: 1;
+          height: 115px;
+          transition: height 0ms 0ms, opacity 600ms 0ms;
+        }
 
         &link {
           color: $color-white;
