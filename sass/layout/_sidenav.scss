@@ -38,13 +38,11 @@
       &__drop {
         margin-left: $margin-sm;
         list-style: none;
-        //visibility: hidden;
         opacity: 0;
         height: 0;
         transition: height 0ms 400ms, opacity 400ms 0ms;
 
         &__active {
-          //visibility: visible;
           opacity: 1;
           height: 11.5rem;
           transition: height 0ms 0ms, opacity 600ms 0ms;
@@ -61,7 +59,7 @@
   &__caret {
     margin-top: 5px;
     margin-right: 3rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 200ms ease-in-out;
 
     &--rotate {
       transform: rotate(180deg);

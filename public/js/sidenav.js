@@ -8,7 +8,7 @@ burger.addEventListener("click", function () {
 });
 
 caret.addEventListener("click", function (e) {
-  //learn_dropdown.classList.toggle("sidenav__list__item__drop__active");
-  caret.toggle("sidenav__caret--rotate");
+  learn_dropdown.classList.toggle("sidenav__list__item__drop__active");
+  caret.classList.toggle("sidenav__caret--rotate");
   e.stopPropagation();
 });
