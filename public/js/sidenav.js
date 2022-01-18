@@ -1,18 +1,14 @@
 let burger = document.querySelector(".nav__burger");
 let sidenav = document.querySelector(".sidenav");
-let learn = document.querySelector(".sidenav__list__item__text");
+let caret = document.querySelector(".sidenav__caret");
 let learn_dropdown = document.querySelector(".sidenav__list__item__drop");
 
 burger.addEventListener("click", function () {
   sidenav.classList.toggle("sidenav__active");
 });
 
-// learn.addEventListener("click", function (e) {
-//   learn_dropdown.classList.toggle("hide");
-//   e.stopPropagation();
-// });
-
-learn.addEventListener("click", function (e) {
-  learn_dropdown.classList.toggle("sidenav__list__item__drop__active");
+caret.addEventListener("click", function (e) {
+  //learn_dropdown.classList.toggle("sidenav__list__item__drop__active");
+  caret.toggle("sidenav__caret--rotate");
   e.stopPropagation();
 });

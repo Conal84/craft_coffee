@@ -332,7 +332,10 @@ body {
         text-decoration: none; }
       .sidenav__list__item__text {
         color: #fff;
+        margin-right: auto;
         position: relative; }
+        .sidenav__list__item__text__wrapper {
+          display: flex; }
       .sidenav__list__item__drop {
         margin-left: 2rem;
         list-style: none;
@@ -341,11 +344,17 @@ body {
         transition: height 0ms 400ms, opacity 400ms 0ms; }
         .sidenav__list__item__drop__active {
           opacity: 1;
-          height: 115px;
+          height: 11.5rem;
           transition: height 0ms 0ms, opacity 600ms 0ms; }
         .sidenav__list__item__droplink {
           color: #fff;
           text-decoration: none; }
+  .sidenav__caret {
+    margin-top: 5px;
+    margin-right: 3rem;
+    transition: transform 0.5s ease-in-out; }
+    .sidenav__caret--rotate {
+      transform: rotate(180deg); }
 
 .home {
   width: 100vw;
