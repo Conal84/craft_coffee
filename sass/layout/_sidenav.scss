@@ -65,4 +65,39 @@
       transform: rotate(180deg);
     }
   }
+
+  &__form {
+    display: flex;
+    //justify-content: center;
+
+    &--container {
+      background-color: $color-primary;
+    }
+
+    &--input {
+      width: 10rem;
+      border: none;
+      background-color: $color-primary;
+
+      &::placeholder {
+        color: $color-white;
+        font-family: "Poiret One", cursive;
+        font-weight: 400;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+    }
+
+    &--btn {
+      background: transparent;
+      border: none;
+      display: none;
+    }
+
+    &--icon {
+      color: $color-white;
+      cursor: pointer;
+      align-self: center;
+    }
+  }
 }

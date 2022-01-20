@@ -114,10 +114,8 @@ body {
       align-self: flex-start; }
 
 .form input {
-  border: 1px solid #f7f7f7;
   border-radius: 0.5rem;
-  outline: none;
-  padding: 0.75rem; }
+  outline: none; }
 
 .hr {
   height: 2px;
@@ -309,7 +307,8 @@ body {
       border: none; }
     .nav__form--icon {
       color: #422417;
-      cursor: pointer; }
+      cursor: pointer;
+      align-self: center; }
 
 .sidenav {
   position: absolute;
@@ -355,6 +354,28 @@ body {
     transition: transform 200ms ease-in-out; }
     .sidenav__caret--rotate {
       transform: rotate(180deg); }
+  .sidenav__form {
+    display: flex; }
+    .sidenav__form--container {
+      background-color: #422417; }
+    .sidenav__form--input {
+      width: 10rem;
+      border: none;
+      background-color: #422417; }
+      .sidenav__form--input::placeholder {
+        color: #fff;
+        font-family: "Poiret One", cursive;
+        font-weight: 400;
+        font-size: 1.6rem;
+        cursor: pointer; }
+    .sidenav__form--btn {
+      background: transparent;
+      border: none;
+      display: none; }
+    .sidenav__form--icon {
+      color: #fff;
+      cursor: pointer;
+      align-self: center; }
 
 .home {
   width: 100vw;
