@@ -38,14 +38,16 @@
       &__drop {
         margin-left: $margin-sm;
         list-style: none;
-        opacity: 0;
-        height: 0;
-        transition: height 0ms 400ms, opacity 400ms 0ms;
+        //opacity: 0;
+        //height: 0;
+        display: none;
+        //transition: height 0ms 400ms, opacity 400ms 0ms;
 
         &__active {
-          opacity: 1;
-          height: 11.5rem;
-          transition: height 0ms 0ms, opacity 600ms 0ms;
+          //opacity: 1;
+          //height: 11.5rem;
+          display: block;
+          //transition: height 0ms 0ms, opacity 600ms 0ms;
         }
 
         &link {
@@ -58,7 +60,7 @@
 
   &__caret {
     margin-top: 5px;
-    margin-right: 3rem;
+    margin-right: $margin-sm;
     transition: transform 200ms ease-in-out;
 
     &--rotate {
@@ -77,14 +79,28 @@
     &--input {
       width: 10rem;
       border: none;
+      cursor: pointer;
       background-color: $color-primary;
+      color: $color-white;
+
+      &:focus::placeholder {
+        color: transparent;
+      }
 
       &::placeholder {
         color: $color-white;
         font-family: "Poiret One", cursive;
         font-weight: 400;
         font-size: 1.6rem;
-        cursor: pointer;
+      }
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        background: url("/public/img/cross.svg");
+        height: 5px;
+        width: 5px;
+        color: $color-white;
+        display: block;
       }
     }
 

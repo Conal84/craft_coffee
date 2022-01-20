@@ -299,6 +299,8 @@ body {
     .nav__form--input {
       width: 15rem;
       border: none; }
+      .nav__form--input:focus::placeholder {
+        color: transparent; }
       .nav__form--input::placeholder {
         color: #422417;
         font-weight: bold; }
@@ -338,19 +340,15 @@ body {
       .sidenav__list__item__drop {
         margin-left: 2rem;
         list-style: none;
-        opacity: 0;
-        height: 0;
-        transition: height 0ms 400ms, opacity 400ms 0ms; }
+        display: none; }
         .sidenav__list__item__drop__active {
-          opacity: 1;
-          height: 11.5rem;
-          transition: height 0ms 0ms, opacity 600ms 0ms; }
+          display: block; }
         .sidenav__list__item__droplink {
           color: #fff;
           text-decoration: none; }
   .sidenav__caret {
     margin-top: 5px;
-    margin-right: 3rem;
+    margin-right: 2rem;
     transition: transform 200ms ease-in-out; }
     .sidenav__caret--rotate {
       transform: rotate(180deg); }
@@ -361,13 +359,23 @@ body {
     .sidenav__form--input {
       width: 10rem;
       border: none;
-      background-color: #422417; }
+      cursor: pointer;
+      background-color: #422417;
+      color: #fff; }
+      .sidenav__form--input:focus::placeholder {
+        color: transparent; }
       .sidenav__form--input::placeholder {
         color: #fff;
         font-family: "Poiret One", cursive;
         font-weight: 400;
-        font-size: 1.6rem;
-        cursor: pointer; }
+        font-size: 1.6rem; }
+      .sidenav__form--input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        background: url("/public/img/cross.svg");
+        height: 5px;
+        width: 5px;
+        color: #fff;
+        display: block; }
     .sidenav__form--btn {
       background: transparent;
       border: none;

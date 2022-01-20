@@ -187,6 +187,10 @@
       width: 15rem;
       border: none;
 
+      &:focus::placeholder {
+        color: transparent;
+      }
+
       &::placeholder {
         color: $color-primary;
         font-weight: bold;
