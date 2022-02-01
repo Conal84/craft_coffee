@@ -63,7 +63,8 @@ body {
   font-weight: 700;
   background-color: #fff05a;
   color: #000;
-  border: none; }
+  border: none;
+  justify-self: center; }
 
 .btn--primary {
   background-color: #b08e83;
@@ -370,12 +371,7 @@ body {
         font-weight: 400;
         font-size: 1.6rem; }
       .sidenav__form--input::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-        background: url("/public/img/cross.svg");
-        height: 5px;
-        width: 5px;
-        color: #fff;
-        display: block; }
+        -webkit-appearance: none; }
     .sidenav__form--btn {
       background: transparent;
       border: none;
@@ -397,6 +393,11 @@ body {
     display: grid;
     grid-template-rows: 2fr 1fr;
     align-items: center;
+    background-image: url("../img/Hero_bg_2400x1830.jpg");
+    background-color: #422417;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     /*Tablet and above Landscape View - 1024px and above*/ }
     @media screen and (min-width: 1024px) {
       .home__hero {
@@ -404,7 +405,9 @@ body {
         grid-template-rows: auto; } }
     .home__hero__image {
       grid-row: 1;
-      background-color: steelblue;
+      background: url("../img/Roma_Espresso_Blend.png") no-repeat center;
+      background-size: contain;
+      height: 50vh;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1024px) {
         .home__hero__image {
@@ -412,8 +415,9 @@ body {
           grid-column: 2; } }
     .home__hero__text {
       grid-row: 2;
-      background-color: powderblue;
-      padding-left: 4rem;
+      padding: 0 2rem;
+      justify-self: center;
+      display: grid;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1024px) {
         .home__hero__text {

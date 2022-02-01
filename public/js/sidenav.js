@@ -19,7 +19,3 @@ sidenav_input.addEventListener("click", function (e) {
   e.stopPropagation();
   console.log("called");
 });
-
-window.onclick = (e) => {
-  console.log(e.target); // to get the element
-};
