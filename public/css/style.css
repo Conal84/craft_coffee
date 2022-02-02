@@ -405,24 +405,65 @@ body {
         grid-template-rows: auto; } }
     .home__hero__image {
       grid-row: 1;
-      background: url("../img/Roma_Espresso_Blend.png") no-repeat center;
-      background-size: contain;
-      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1024px) {
         .home__hero__image {
           grid-row: 1;
           grid-column: 2; } }
+      .home__hero__image__center {
+        height: 400px;
+        width: 400px;
+        object-fit: contain;
+        z-index: 10;
+        /*Tablet and above Landscape View - 1024px and above*/ }
+        @media screen and (min-width: 700px) {
+          .home__hero__image__center {
+            height: 500px;
+            width: 500px; } }
+      .home__hero__image__left {
+        display: none;
+        /*Tablet and above Landscape View - 1000px and above*/ }
+        @media screen and (min-width: 1000px) {
+          .home__hero__image__left {
+            display: block;
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            left: 50px;
+            bottom: 150px;
+            z-index: 5; } }
+      .home__hero__image__right {
+        display: none;
+        /*Tablet and above Landscape View - 700px and above*/ }
+        @media screen and (min-width: 700px) {
+          .home__hero__image__right {
+            display: block;
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            right: 50px;
+            bottom: 150px;
+            z-index: 5; } }
     .home__hero__text {
       grid-row: 2;
-      padding: 0 2rem;
+      padding: 0 0 4rem 2rem;
       justify-self: center;
       display: grid;
+      text-align: center;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1024px) {
         .home__hero__text {
           grid-row: 1;
-          grid-column: 1; } }
+          grid-column: 1;
+          text-align: left; }
+          .home__hero__text > .btn {
+            justify-self: left; } }
   .home__products {
     display: grid;
     grid-template-rows: 0.75fr 0.75fr 5fr;

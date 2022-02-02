@@ -26,27 +26,79 @@
 
     &__image {
       grid-row: 1;
-      background: url("../img/Roma_Espresso_Blend.png") no-repeat center;
-      background-size: contain;
-      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+
       /*Tablet and above Landscape View - 1024px and above*/
       @media screen and (min-width: 1024px) {
         grid-row: 1;
         grid-column: 2;
       }
+
+      &__center {
+        height: 400px;
+        width: 400px;
+        object-fit: contain;
+        z-index: 10;
+
+        /*Tablet and above Landscape View - 1024px and above*/
+        @media screen and (min-width: 700px) {
+          height: 500px;
+          width: 500px;
+        }
+      }
+
+      &__left {
+        display: none;
+
+        /*Tablet and above Landscape View - 1000px and above*/
+        @media screen and (min-width: 1000px) {
+          display: block;
+          height: 400px;
+          width: 400px;
+          position: absolute;
+          left: 50px;
+          bottom: 150px;
+          z-index: 5;
+        }
+      }
+
+      &__right {
+        display: none;
+
+        /*Tablet and above Landscape View - 700px and above*/
+        @media screen and (min-width: 700px) {
+          display: block;
+          height: 400px;
+          width: 400px;
+          position: absolute;
+          right: 50px;
+          bottom: 150px;
+          z-index: 5;
+        }
+      }
     }
 
     &__text {
       grid-row: 2;
-      //background-color: powderblue;
-      padding: 0 2rem;
+      padding: 0 0 4rem 2rem;
       justify-self: center;
       display: grid;
+      text-align: center;
 
       /*Tablet and above Landscape View - 1024px and above*/
       @media screen and (min-width: 1024px) {
         grid-row: 1;
         grid-column: 1;
+        text-align: left;
+
+        & > .btn {
+          justify-self: left;
+        }
       }
     }
   }
