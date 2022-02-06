@@ -108,12 +108,12 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: greenyellow;
+      background-color: red;
       border-radius: 5rem 5rem 0 0;
       clip-path: ellipse(0% 0% at top);
       transition: clip-path 0.4s ease-in-out; }
   .card__product {
-    background-color: khaki;
+    background-color: #e2ebc3;
     border-radius: 0 0 5rem 5rem;
     height: 40%;
     display: flex;
@@ -484,7 +484,7 @@ body {
   .home__products {
     display: grid;
     grid-template-rows: 0.5fr 0.5fr 5fr;
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
     align-items: center; }
     .home__products__heading {
       grid-row: 1;
@@ -511,15 +511,15 @@ body {
           grid-template-columns: repeat(4, 1fr); } }
       .home__products__container::-webkit-scrollbar {
         height: 8px;
-        border: 1px solid #b08e83; }
+        border: 1px solid #e2ebc3; }
         .home__products__container::-webkit-scrollbar-track {
           border-radius: 1rem;
           box-shadow: inset 0 0 10px rgba(238, 238, 238, 0.25); }
         .home__products__container::-webkit-scrollbar-thumb {
-          background: #b08e83;
+          background: #e2ebc3;
           border-radius: 1rem; }
         .home__products__container::-webkit-scrollbar-thumb:hover {
-          background: #9b776d; }
+          background: #adccae; }
       .home__products__container__card {
         display: grid;
         justify-items: center;
@@ -528,52 +528,64 @@ body {
     display: none;
     /*Tablet and above Portrait View - 768px and above*/
     /*Tablet and above Landscape View - 1024px and above*/ }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 700px) {
       .home__collage {
         display: grid;
         grid-template-columns: 12;
         grid-template-rows: 2;
         grid-template-areas: "about about about contact contact contact contact contact" "sustain sustain sustain sustain sustain sustain roasting roasting"; } }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1000px) {
       .home__collage {
         grid-template-areas: "about about about contact contact contact contact contact brew brew brew brew" "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew"; } }
+    .home__collage__image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.2s; }
+      .home__collage__image:hover {
+        opacity: 0.75; }
     .home__collage__about {
-      background-color: cyan;
       grid-area: about;
       display: none;
+      background-image: url("../img/About.jpg");
+      background-color: #422417;
       /*Tablet and above Portrait View - 768px and above*/ }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         .home__collage__about {
           display: block; } }
     .home__collage__contact {
-      background-color: darkblue;
       grid-area: contact;
       display: none;
+      background-image: url("../img/Contact.jpg");
+      background-color: #b08e83;
       /*Tablet and above Portrait View - 768px and above*/ }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         .home__collage__contact {
           display: block; } }
     .home__collage__brew {
-      background-color: darkgoldenrod;
       grid-area: brew;
       display: none;
+      background-image: url("../img/Brew.jpg");
+      background-color: #9b776d;
       /*Tablet and above Landscape View - 1024px and above*/ }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1000px) {
         .home__collage__brew {
           display: block; } }
     .home__collage__sustain {
-      background-color: darkgray;
       grid-area: sustain;
       display: none;
+      background-image: url("../img/Sustain.jpg");
+      background-color: #f7f7f7;
       /*Tablet and above Portrait View - 768px and above*/ }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         .home__collage__sustain {
           display: block; } }
     .home__collage__roasting {
-      background-color: darkkhaki;
       grid-area: roasting;
       display: none;
+      background-image: url("../img/Roasting.jpg");
+      background-color: #777;
       /*Tablet and above Portrait View - 768px and above*/ }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         .home__collage__roasting {
           display: block; } }

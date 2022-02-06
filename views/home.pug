@@ -29,13 +29,22 @@ block content
         h2.heading-secondary Latest Additions
       hr.hr.home__products__hr
       .home__products__container
-        .home__products__container__card card1
-        .home__products__container__card card2
-        .home__products__container__card card3
-        .home__products__container__card card4
+        .home__products__container__card
+          include _card
+        .home__products__container__card
+          include _card
+        .home__products__container__card
+          include _card
+        .home__products__container__card
+          include _card
     section.home__collage 
-      .home__collage__about
-      .home__collage__contact
-      .home__collage__brew
-      .home__collage__sustain
-      .home__collage__roasting
+      .home__collage__image.home__collage__about
+        h3.home__collage__about__text.heading-tertiary Our Story
+      .home__collage__image.home__collage__contact
+        h3.home__collage__contact__text.heading-tertiary Contact Us
+      .home__collage__image.home__collage__brew
+        h3.home__collage__brew__text.heading-tertiary Brew Methods
+      .home__collage__image.home__collage__sustain
+        h3.home__collage__sustain__text.heading-tertiary Sustainability
+      .home__collage__image.home__collage__roasting
+        h3.home__collage__roasting__text.heading-tertiary Roasting

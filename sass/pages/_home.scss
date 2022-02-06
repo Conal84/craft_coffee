@@ -106,7 +106,7 @@
   &__products {
     display: grid;
     grid-template-rows: 0.5fr 0.5fr 5fr;
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
     align-items: center;
 
     &__heading {
@@ -141,7 +141,7 @@
 
       &::-webkit-scrollbar {
         height: 8px;
-        border: 1px solid $color-secondary;
+        border: 1px solid $color-highlight-1;
 
         &-track {
           border-radius: $radius-md;
@@ -149,12 +149,12 @@
         }
 
         &-thumb {
-          background: $color-secondary;
+          background: $color-highlight-1;
           border-radius: $radius-md;
         }
 
         &-thumb:hover {
-          background: $color-secondary-dark;
+          background: $color-highlight-1-dark;
         }
       }
 
@@ -170,7 +170,7 @@
     display: none;
 
     /*Tablet and above Portrait View - 768px and above*/
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 700px) {
       display: grid;
       grid-template-columns: 12;
       grid-template-rows: 2;
@@ -180,63 +180,79 @@
     }
 
     /*Tablet and above Landscape View - 1024px and above*/
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1000px) {
       grid-template-areas:
         "about about about contact contact contact contact contact brew brew brew brew"
         "sustain sustain sustain sustain sustain sustain roasting roasting brew brew brew brew";
     }
 
+    &__image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
     &__about {
-      background-color: cyan;
       grid-area: about;
       display: none;
+      background-image: url("../img/About.jpg");
+      background-color: $color-primary;
 
       /*Tablet and above Portrait View - 768px and above*/
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         display: block;
       }
     }
 
     &__contact {
-      background-color: darkblue;
       grid-area: contact;
       display: none;
+      background-image: url("../img/Contact.jpg");
+      background-color: $color-secondary;
 
       /*Tablet and above Portrait View - 768px and above*/
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         display: block;
       }
     }
 
     &__brew {
-      background-color: darkgoldenrod;
       grid-area: brew;
       display: none;
+      background-image: url("../img/Brew.jpg");
+      background-color: $color-secondary-dark;
 
       /*Tablet and above Landscape View - 1024px and above*/
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1000px) {
         display: block;
       }
     }
 
     &__sustain {
-      background-color: darkgray;
       grid-area: sustain;
       display: none;
+      background-image: url("../img/Sustain.jpg");
+      background-color: $color-grey-light-1;
 
       /*Tablet and above Portrait View - 768px and above*/
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         display: block;
       }
     }
 
     &__roasting {
-      background-color: darkkhaki;
       grid-area: roasting;
       display: none;
+      background-image: url("../img/Roasting.jpg");
+      background-color: $color-grey-dark-1;
 
       /*Tablet and above Portrait View - 768px and above*/
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 700px) {
         display: block;
       }
     }
