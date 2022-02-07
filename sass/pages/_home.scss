@@ -191,16 +191,36 @@
       background-size: cover;
       background-position: center;
       transition: all 0.2s;
+      position: relative;
+      cursor: pointer;
 
-      &:hover {
-        opacity: 0.75;
+      &:hover > * {
+        top: 50%;
+        opacity: 1;
       }
+    }
+
+    &__text {
+      color: $color-white;
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.7s;
+      // background-color: rgba($color-white, 0.7);
+      // width: 100%;
+      // text-align: center;
     }
 
     &__about {
       grid-area: about;
       display: none;
-      background-image: url("../img/About.jpg");
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/About.jpg");
       background-color: $color-primary;
 
       /*Tablet and above Portrait View - 768px and above*/
@@ -212,7 +232,11 @@
     &__contact {
       grid-area: contact;
       display: none;
-      background-image: url("../img/Contact.jpg");
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/Contact.jpg");
       background-color: $color-secondary;
 
       /*Tablet and above Portrait View - 768px and above*/
@@ -224,7 +248,11 @@
     &__brew {
       grid-area: brew;
       display: none;
-      background-image: url("../img/Brew.jpg");
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/Brew.jpg");
       background-color: $color-secondary-dark;
 
       /*Tablet and above Landscape View - 1024px and above*/
@@ -236,7 +264,11 @@
     &__sustain {
       grid-area: sustain;
       display: none;
-      background-image: url("../img/Sustain.jpg");
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/Sustain.jpg");
       background-color: $color-grey-light-1;
 
       /*Tablet and above Portrait View - 768px and above*/
@@ -248,7 +280,11 @@
     &__roasting {
       grid-area: roasting;
       display: none;
-      background-image: url("../img/Roasting.jpg");
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/Roasting.jpg");
       background-color: $color-grey-dark-1;
 
       /*Tablet and above Portrait View - 768px and above*/

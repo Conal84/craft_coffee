@@ -541,13 +541,24 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      transition: all 0.2s; }
-      .home__collage__image:hover {
-        opacity: 0.75; }
+      transition: all 0.2s;
+      position: relative;
+      cursor: pointer; }
+      .home__collage__image:hover > * {
+        top: 50%;
+        opacity: 1; }
+    .home__collage__text {
+      color: #fff;
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.7s; }
     .home__collage__about {
       grid-area: about;
       display: none;
-      background-image: url("../img/About.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/About.jpg");
       background-color: #422417;
       /*Tablet and above Portrait View - 768px and above*/ }
       @media screen and (min-width: 700px) {
@@ -556,7 +567,7 @@ body {
     .home__collage__contact {
       grid-area: contact;
       display: none;
-      background-image: url("../img/Contact.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/Contact.jpg");
       background-color: #b08e83;
       /*Tablet and above Portrait View - 768px and above*/ }
       @media screen and (min-width: 700px) {
@@ -565,7 +576,7 @@ body {
     .home__collage__brew {
       grid-area: brew;
       display: none;
-      background-image: url("../img/Brew.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/Brew.jpg");
       background-color: #9b776d;
       /*Tablet and above Landscape View - 1024px and above*/ }
       @media screen and (min-width: 1000px) {
@@ -574,7 +585,7 @@ body {
     .home__collage__sustain {
       grid-area: sustain;
       display: none;
-      background-image: url("../img/Sustain.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/Sustain.jpg");
       background-color: #f7f7f7;
       /*Tablet and above Portrait View - 768px and above*/ }
       @media screen and (min-width: 700px) {
@@ -583,7 +594,7 @@ body {
     .home__collage__roasting {
       grid-area: roasting;
       display: none;
-      background-image: url("../img/Roasting.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/Roasting.jpg");
       background-color: #777;
       /*Tablet and above Portrait View - 768px and above*/ }
       @media screen and (min-width: 700px) {
