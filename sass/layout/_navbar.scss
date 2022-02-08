@@ -13,6 +13,7 @@
 
   &__banner {
     font-size: 2rem;
+    height: 100%;
     font-weight: 700;
     text-decoration: none;
     color: $color-white;
@@ -68,7 +69,7 @@
         border-radius: 3px;
         position: absolute;
         left: 0px;
-        bottom: 2px;
+        bottom: 7px;
         background-color: $color-white;
         transition: width 200ms ease-in;
       }
@@ -96,7 +97,7 @@
 
       &__drop {
         position: absolute;
-        top: 5vh;
+        top: 5rem;
         left: -1rem;
         background-color: $color-primary;
         width: 14rem;
@@ -104,21 +105,26 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        z-index: 20;
 
         opacity: 0;
         visibility: hidden;
         transition: opacity 200ms ease-in-out;
 
+        & > * {
+          padding-top: 7px;
+        }
+
         &--account {
           left: -4rem;
           width: 11rem;
+          padding: 0 1rem 1rem 1rem;
         }
 
         &--search {
           left: -16rem;
           width: 24rem;
-          padding: 1rem;
+          padding: 0 1rem 1rem 1rem;
         }
       }
     }
@@ -131,6 +137,10 @@
       color: $color-white;
       font-size: 1.4rem;
       width: 100%;
+
+      & > * {
+        padding-top: 7px;
+      }
 
       &:hover &__drop,
       &:focus &__drop {
@@ -206,6 +216,8 @@
       color: $color-primary;
       cursor: pointer;
       align-self: center;
+      font-size: 1.6rem;
+      padding: 5px 0;
     }
   }
 }

@@ -194,6 +194,7 @@ body {
     position: relative; }
   .nav__banner {
     font-size: 2rem;
+    height: 100%;
     font-weight: 700;
     text-decoration: none;
     color: #fff; }
@@ -237,7 +238,7 @@ body {
         border-radius: 3px;
         position: absolute;
         left: 0px;
-        bottom: 2px;
+        bottom: 7px;
         background-color: #fff;
         transition: width 200ms ease-in; }
       .nav__list__item:hover::after, .nav__list__item:focus::after {
@@ -254,7 +255,7 @@ body {
         color: #fff; }
       .nav__list__item__drop {
         position: absolute;
-        top: 5vh;
+        top: 5rem;
         left: -1rem;
         background-color: #422417;
         width: 14rem;
@@ -262,17 +263,20 @@ body {
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        z-index: 20;
         opacity: 0;
         visibility: hidden;
         transition: opacity 200ms ease-in-out; }
+        .nav__list__item__drop > * {
+          padding-top: 7px; }
         .nav__list__item__drop--account {
           left: -4rem;
-          width: 11rem; }
+          width: 11rem;
+          padding: 0 1rem 1rem 1rem; }
         .nav__list__item__drop--search {
           left: -16rem;
           width: 24rem;
-          padding: 1rem; }
+          padding: 0 1rem 1rem 1rem; }
     .nav__list__subitem {
       list-style: none;
       font-weight: 700;
@@ -281,6 +285,8 @@ body {
       color: #fff;
       font-size: 1.4rem;
       width: 100%; }
+      .nav__list__subitem > * {
+        padding-top: 7px; }
       .nav__list__subitem:hover .nav__list__subitem__drop,
       .nav__list__subitem:focus .nav__list__subitem__drop {
         opacity: 1;
@@ -328,7 +334,9 @@ body {
     .nav__form--icon {
       color: #422417;
       cursor: pointer;
-      align-self: center; }
+      align-self: center;
+      font-size: 1.6rem;
+      padding: 5px 0; }
 
 .sidenav {
   position: absolute;
@@ -554,7 +562,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      transition: all 0.7s; }
+      transition: all 0.7s ease-in-out; }
     .home__collage__about {
       grid-area: about;
       display: none;
