@@ -5,6 +5,8 @@
   background-color: $color-grey-light-2;
   width: 90%;
   margin: 2rem 0;
+  justify-self: center;
+  align-self: start;
 
   /*Tablet and above Portrait View - 768px and above*/
   @media screen and (min-width: 768px) {

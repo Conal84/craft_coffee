@@ -1,0 +1,19 @@
+extends base
+
+block content 
+  .shop
+    .shop-head
+      a.btn.btn--primary.btn--filter(href=`#`) Filter
+      h2.heading-secondary.heading-shop Our Bestsellers 
+      a.btn.btn--secondary.btn--sort(href=`#`) Sort by
+    hr.hr
+    .shop-product
+      .products__container.products--shop
+        .products__container__card
+          include _card
+        .products__container__card
+          include _card
+        .products__container__card
+          include _card
+        .products__container__card
+          include _card

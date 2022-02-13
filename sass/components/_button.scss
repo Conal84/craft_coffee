@@ -36,11 +36,15 @@
     background-color: $color-btn-primary;
     color: $color-white;
     border: none;
+    text-align: center;
+    margin: auto;
   }
 
   &--secondary {
     background-color: $color-white;
     color: $color-btn-secondary;
     border: 1px solid $color-btn-secondary;
+    text-align: center;
+    margin: auto;
   }
 }

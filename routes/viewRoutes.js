@@ -6,5 +6,6 @@ const viewController = require("../controllers/viewsController");
 const router = express.Router();
 
 router.get("/", viewController.getHome);
+router.get("/shop", viewController.getShop);
 
 module.exports = router;
