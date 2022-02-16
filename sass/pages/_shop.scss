@@ -9,6 +9,7 @@
   display: grid;
   grid-template-rows: 2;
   grid-template-columns: 2;
+  padding-top: 3rem;
 
   /*Tablet and above Portrait View - 700px and above*/
   @media screen and (min-width: 700px) {
@@ -52,6 +53,13 @@
   }
 }
 
-.products--shop {
-  //display: grid;
+.shop-products {
+  background-color: $color-grey-light-1;
+  padding: 5rem;
+  margin: 1rem;
+  display: grid;
+  justify-items: center;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  overflow: hidden;
 }
