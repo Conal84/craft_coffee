@@ -7,5 +7,6 @@ const router = express.Router();
 
 router.get("/", viewController.getHome);
 router.get("/shop", viewController.getShop);
+router.get("/product", viewController.getProduct);
 
 module.exports = router;

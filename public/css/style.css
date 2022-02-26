@@ -37,7 +37,7 @@ body {
   font-size: 1.6rem; }
   .paragraph--italic {
     color: #422417;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-style: italic; }
 
 .btn, .btn:link, .btn:visited {
@@ -81,8 +81,8 @@ body {
   margin: auto; }
 
 .card {
-  height: 50rem;
-  width: 40rem;
+  height: 40rem;
+  width: 30rem;
   background-color: #fff;
   border-radius: 5rem;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
@@ -93,6 +93,8 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
   .card:hover .card__top__ellipse {
     clip-path: ellipse(55% 40% at top); }
+  .card__link {
+    text-decoration: none; }
   .card__top {
     height: 60%;
     border-radius: 5rem 5rem 0 0;
@@ -124,12 +126,13 @@ body {
     flex-direction: column;
     align-items: center; }
     .card__product__name {
+      color: #422417;
       text-transform: uppercase;
       font-weight: bold;
-      padding-top: 2rem; }
+      padding-top: 1rem; }
     .card__product__description {
       color: #999;
-      padding: 2rem 5rem 0 5rem;
+      padding: 1rem 5rem 0 5rem;
       align-self: flex-start; }
     .card__product__price {
       padding-left: 5rem;
@@ -153,6 +156,8 @@ body {
     .hr {
       width: 75%; } }
   .hr__sm {
+    align-self: center;
+    margin: 0.5rem 0;
     width: 75%; }
 
 .fas {
@@ -615,6 +620,23 @@ body {
         .home__collage__roasting {
           display: block; } }
 
+.product {
+  height: calc(100vh - 10rem); }
+  .product__img {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .product__img > img {
+      height: 100%; }
+  .product__desc {
+    height: 50%; }
+
+.textBox {
+  border: 5px solid #999;
+  border-radius: 5rem;
+  margin-bottom: 10px; }
+
 .shop {
   min-height: calc(100vh - 10rem);
   display: grid;
@@ -667,6 +689,6 @@ body {
   margin: 1rem;
   display: grid;
   justify-items: center;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   overflow: hidden; }

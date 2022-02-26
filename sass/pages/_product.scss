@@ -1,0 +1,24 @@
+.product {
+  height: calc(100vh - 10rem);
+
+  &__img {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      height: 100%;
+    }
+  }
+
+  &__desc {
+    height: 50%;
+  }
+}
+
+.textBox {
+  border: 5px solid $color-grey-dark-2;
+  border-radius: $radius-lg;
+  margin-bottom: 10px;
+}

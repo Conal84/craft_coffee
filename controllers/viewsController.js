@@ -1,13 +1,20 @@
 exports.getHome = (req, res, next) => {
-  // 3) Render template using tour data from step 1)
+  // Render homepage
   res.status(200).render("home", {
     title: "Homepage",
   });
 };
 
 exports.getShop = (req, res, next) => {
-  // 3) Render template using tour data from step 1)
+  // Render shop page
   res.status(200).render("shop", {
     title: "Shop",
+  });
+};
+
+exports.getProduct = (req, res, next) => {
+  // Render product page
+  res.status(200).render("product", {
+    title: "Product",
   });
 };
