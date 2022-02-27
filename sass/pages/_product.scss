@@ -1,5 +1,12 @@
 .product {
   height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+
+  /*Tablet and above Portrait View - 700px and above*/
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
 
   &__img {
     height: 50%;
@@ -7,18 +14,52 @@
     justify-content: center;
     align-items: center;
 
+    /*Tablet and above Portrait View - 700px and above*/
+    @media screen and (min-width: 700px) {
+      height: 100%;
+      width: 50%;
+      order: 1;
+    }
+
     > img {
       height: 100%;
+
+      /*Tablet and above Portrait View - 700px and above*/
+      @media screen and (min-width: 700px) {
+        height: 60%;
+      }
+
+      /*950px and above*/
+      @media screen and (min-width: 950px) {
+        height: 80%;
+      }
     }
   }
 
-  &__desc {
+  &__info {
     height: 50%;
-  }
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-grey-light-1;
 
-.textBox {
-  border: 5px solid $color-grey-dark-2;
-  border-radius: $radius-lg;
-  margin-bottom: 10px;
+    /*Tablet and above Portrait View - 700px and above*/
+    @media screen and (min-width: 700px) {
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  &__form {
+    background-color: chartreuse;
+    height: 80%;
+    width: 90%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    align-self: center;
+  }
 }

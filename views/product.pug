@@ -4,5 +4,22 @@ block content
   .product 
     .product__img
       img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
-    .product__desc
-      .textBox
+    .product__info
+      form.product__form(action='/cart/add/' method='post')
+        .product__name.heading-tertiary Coffee Name
+        .product__size
+          input.paragraph(type='radio' name='size' value='250g')
+          |  250g
+          input.paragraph(type='radio' name='size' value='500g')
+          |  500g
+          input.paragraph(type='radio' name='size' value='1kg')
+          |  1kg
+        .product__roast.paragraph Roast 
+        .product__description.paragraph Lorem ipsum dolor sit amet
+        .product__grind
+          input.paragraph(type='radio' name='grind' value='Wholebean')
+          |  Wholebean
+          input.paragraph(type='radio' name='grind' value='Cafetiere')
+          |  Cafetiere
+          input.paragraph(type='radio' name='grind' value='Filter')
+          |  Filter
