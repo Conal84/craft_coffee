@@ -662,6 +662,7 @@ body {
         width: 50%; } }
   .product__form {
     background-color: chartreuse;
+    border-radius: 5rem;
     height: 80%;
     width: 90%;
     padding: 3rem;
@@ -669,6 +670,24 @@ body {
     flex-direction: column; }
   .product__name {
     align-self: center; }
+  .product__size, .product__grind {
+    display: flex; }
+    .product__size input, .product__grind input {
+      width: auto;
+      height: 100%;
+      border-radius: 2px;
+      padding: 4px 8px;
+      color: crimson;
+      appearance: none;
+      outline: none;
+      cursor: pointer; }
+      .product__size input:checked, .product__grind input:checked {
+        color: #fff; }
+      .product__size input:before, .product__grind input:before {
+        content: attr(label);
+        display: inline-block;
+        text-align: center;
+        width: 100%; }
 
 .shop {
   min-height: calc(100vh - 10rem);

@@ -52,6 +52,7 @@
 
   &__form {
     background-color: chartreuse;
+    border-radius: $radius-lg;
     height: 80%;
     width: 90%;
     padding: 3rem;
@@ -61,5 +62,32 @@
 
   &__name {
     align-self: center;
+  }
+
+  &__size,
+  &__grind {
+    display: flex;
+
+    & input {
+      width: auto;
+      height: 100%;
+      border-radius: 2px;
+      padding: 4px 8px;
+      color: crimson;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+
+      &:checked {
+        color: $color-white;
+      }
+
+      &:before {
+        content: attr(label);
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 }
