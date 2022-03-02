@@ -56,22 +56,13 @@
     height: 80%;
     width: 90%;
     padding: 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__name {
-    align-self: center;
-  }
-
-  &__size,
-  &__grind {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 10;
+    align-items: center;
+    justify-items: center;
 
     & input {
-      width: auto;
-      height: 100%;
-      border-radius: 2px;
       padding: 4px 8px;
       color: crimson;
       appearance: none;
@@ -84,10 +75,68 @@
 
       &:before {
         content: attr(label);
-        display: inline-block;
-        text-align: center;
-        width: 100%;
       }
     }
+  }
+
+  &__name {
+    grid-row: 1;
+    grid-column: 1 / 4;
+  }
+
+  &__size {
+    grid-row: 2;
+    grid-column: 1 / 4;
+
+    &--250 {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    &--500 {
+      grid-row: 3;
+      grid-column: 2;
+    }
+
+    &--1000 {
+      grid-row: 3;
+      grid-column: 3;
+    }
+  }
+
+  &__roast {
+    grid-row: 4;
+    grid-column: 1 / 4;
+  }
+
+  &__description {
+    grid-row: 5;
+    grid-column: 1 / 4;
+  }
+
+  &__grind {
+    grid-row: 6;
+    grid-column: 1 / 4;
+
+    &--whole {
+      grid-row: 7;
+      grid-column: 1;
+    }
+
+    &--cafe {
+      grid-row: 7;
+      grid-column: 2;
+    }
+
+    &--filter {
+      grid-row: 7;
+      grid-column: 3;
+    }
+  }
+  &__submit {
+    grid-row: 8;
+    grid-column: 1 / 4;
+    width: 50%;
+    height: 75%;
   }
 }
