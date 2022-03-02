@@ -6,15 +6,17 @@ block content
       img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
     .product__info
       form.product__form(action='/cart/add/' method='post')
-        .product__name.heading-primary Coffee Name
-        .product__size.heading-secondary Size
+        .product__name.heading-secondary Coffee Name
+        .product__size.heading-tertiary Size
         input.paragraph.product__size--250(label='250g' type='radio' id='250' name='size' value='250g' checked='')
         input.paragraph.product__size--500(label='500g' type='radio' id='500' name='size' value='250g')
         input.paragraph.product__size--1000(label='1kg' type='radio' id='1000' name='size' value='1kg')
-        .product__roast.heading-secondary Roast 
+        hr.hr__sm.hr--roast
+        .product__roast.heading-tertiary Roast 
         .product__description.paragraph Lorem ipsum dolor sit amet
-        .product__grind.heading-secondary Grind
+        hr.hr__sm.hr--grind
+        .product__grind.heading-tertiary Grind
         input.paragraph.product__grind--whole(label='Wholebean' type='radio' id='wholebean' name='grind' value='Wholebean' checked='')
         input.paragraph.product__grind--cafe(label='Cafetiere' type='radio' id='cafetiere' name='grind' value='Cafetiere')
         input.paragraph.product__grind--filter(label='Filter' type='radio' id='filter' name='grind' value='Filter')
-        input.product__submit(type='submit' value='Submit')
+        input.product__submit.btn.btn--cta(type='submit' value='Add to basket')
