@@ -6,7 +6,8 @@ block content
       img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
     .product__info
       form.product__form(action='/cart/add/' method='post')
-        .product__name.heading-secondary Coffee Name
+        .product__nameBg
+          .product__name.heading-secondary Coffee Name
         .product__size.heading-tertiary Size
         input.paragraph.product__size--250(label='250g' type='radio' id='250' name='size' value='250g' checked='')
         input.paragraph.product__size--500(label='500g' type='radio' id='500' name='size' value='250g')

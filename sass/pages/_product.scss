@@ -9,7 +9,7 @@
   }
 
   &__img {
-    height: 50%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
   }
 
   &__info {
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,14 +53,18 @@
   &__form {
     background-color: $color-white;
     border-radius: $radius-lg;
-    height: 70%;
-    width: 80%;
-    padding: 3rem;
+    box-shadow: $box-shadow;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-rows: 5fr max-content max-content 0.5fr max-content max-content 0.5fr max-content max-content 5fr;
+    grid-row-gap: 5px;
     align-items: center;
     justify-items: center;
+
+    /* @700px and above */
+    @media screen and (min-width: 700px) {
+      grid-template-rows: 3fr 1fr 1fr 0.5fr 1fr 1fr 0.5fr 1fr 1fr 3fr;
+    }
 
     & input {
       padding: 4px 8px;
@@ -70,7 +74,7 @@
       cursor: pointer;
 
       &:checked {
-        color: crimson;
+        color: $color-highlight-1-dark;
       }
 
       &:before {
@@ -79,10 +83,16 @@
     }
   }
 
-  &__name {
+  &__nameBg {
+    background-color: $color-highlight-1;
+    height: 100%;
+    width: 100%;
+    border-radius: $radius-lg $radius-lg 0 0;
     grid-row: 1;
     grid-column: 1 / 4;
-    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__size {
@@ -137,8 +147,13 @@
   &__submit {
     grid-row: 10;
     grid-column: 1 / 4;
-    width: 50%;
-    height: 90%;
+    width: 60%;
+    height: 75%;
+
+    /* @700px and above */
+    @media screen and (min-width: 700px) {
+      height: 50%;
+    }
   }
 }
 
