@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const globalErrorHandler = require("./controllers/errorController");
 const viewRouter = require("./routes/viewRoutes");
+const basketRouter = require("./routes/basketRoutes");
 
 const app = express();
 
@@ -27,8 +28,15 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+// Access req.boy - Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded());
+
+// Access req.boy - Parse JSON bodies (as sent by API clients)
+app.use(express.json({ limit: "10kb" }));
+
 // 2) ROUTES
 app.use("/", viewRouter);
+app.use("/basket", basketRouter);
 
 // Error handling middleware function
 // Express auto calls this when there is an error

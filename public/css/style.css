@@ -620,6 +620,9 @@ body {
         .home__collage__roasting {
           display: block; } }
 
+.basket {
+  height: calc(100vh - 10rem); }
+
 .product {
   height: calc(100vh - 10rem);
   display: flex;

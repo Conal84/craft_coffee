@@ -18,3 +18,10 @@ exports.getProduct = (req, res, next) => {
     title: "Product",
   });
 };
+
+exports.getBasket = (req, res, next) => {
+  // Render basket page
+  res.status(200).render("basket", {
+    title: "Basket",
+  });
+};
