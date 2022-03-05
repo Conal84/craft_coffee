@@ -63,7 +63,7 @@
 
     /* @700px and above */
     @media screen and (min-width: 700px) {
-      grid-template-rows: 3fr 1fr 1fr 0.5fr 1fr 1fr 0.5fr 1fr 1fr 3fr;
+      grid-template-rows: 2.5fr max-content max-content 0.5fr 1fr 1fr 0.5fr max-content max-content 2fr;
     }
 
     & input {
@@ -77,9 +77,14 @@
         color: $color-highlight-1-dark;
       }
 
-      &:before {
-        content: attr(label);
+      &::before {
+        content: attr(label) "\a\a"attr(data-price);
+        white-space: pre;
       }
+
+      // &:after {
+      //   content: attr(data-price);
+      // }
     }
   }
 
@@ -137,22 +142,43 @@
     &--cafe {
       grid-row: 9;
       grid-column: 2;
+      padding-top: 5px;
     }
 
     &--filter {
       grid-row: 9;
       grid-column: 3;
+      padding-top: 5px;
     }
   }
-  &__submit {
+
+  &__submitContainer {
+    display: flex;
     grid-row: 10;
     grid-column: 1 / 4;
-    width: 60%;
     height: 75%;
+    padding: 2px 5px 2px 2px;
+    margin-bottom: 10px;
+    background-color: $color-btn-cta;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
 
     /* @700px and above */
     @media screen and (min-width: 700px) {
-      height: 50%;
+      height: 80%;
+    }
+  }
+
+  &__submit {
+    height: 100%;
+    transition: background-color 0.2s;
+    border-radius: 1.5rem 0 0 1.5rem;
+
+    &:hover {
+      background-color: $color-white;
+      transform: none;
+      box-shadow: none;
     }
   }
 }
@@ -165,4 +191,25 @@
 .hr--grind {
   grid-row: 7;
   grid-column: 1 / 4;
+}
+
+#quantity {
+  background-color: $color-btn-cta;
+  border: none;
+  cursor: pointer;
+  padding-right: 2px;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+label[for="quantity"] {
+  font-family: "Arya", sans-serif;
+  font-weight: 700;
+  color: $color-black;
+  cursor: pointer;
+  border-left: 1px solid $color-black;
+  padding-left: 5px;
 }
