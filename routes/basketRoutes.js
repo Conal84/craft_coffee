@@ -5,6 +5,6 @@ const basketController = require("../controllers/basketController");
 
 const router = express.Router();
 
-router.post("/add", basketController.addToBasket);
+router.get("/add", basketController.addToBasket);
 
 module.exports = router;

@@ -28,10 +28,10 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-// Access req.boy - Parse URL-encoded bodies (as sent by HTML forms)
-app.use(express.urlencoded());
+// Access req.body - Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 
-// Access req.boy - Parse JSON bodies (as sent by API clients)
+// Access req.body - Parse JSON bodies (as sent by API clients)
 app.use(express.json({ limit: "10kb" }));
 
 // 2) ROUTES
