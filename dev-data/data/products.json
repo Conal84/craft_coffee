@@ -1,0 +1,172 @@
+[
+  {
+    "id": 0,
+    "name": "CoffeeOne",
+    "description": "A lighlt roast South American blend",
+    "roast": 2,
+    "images": {
+      "small": "image1.jpg",
+      "medium": "image2.jpg",
+      "large": "image3.jpg"
+    },
+    "variants": [
+      {
+        "sku": "CoffeeOne_250g_wholebean",
+        "size": 250,
+        "grind": "wholebean",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_500g_wholebean",
+        "size": 500,
+        "grind": "wholebean",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_1000g_wholebean",
+        "size": 1000,
+        "grind": "wholebean",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_250g_cafetiere",
+        "size": 250,
+        "grind": "cafetiere",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_500g_cafetiere",
+        "size": 500,
+        "grind": "cafetiere",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_1000g_cafetiere",
+        "size": 1000,
+        "grind": "cafetiere",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_250g_filter",
+        "size": 250,
+        "grind": "filter",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_500g_filter",
+        "size": 2500,
+        "grind": "filter",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeOne_1000g_filter",
+        "size": 1000,
+        "grind": "filter",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "CoffeeTwo",
+    "description": "A dark roast African blend",
+    "roast": 2,
+    "images": {
+      "small": "image1.jpg",
+      "medium": "image2.jpg",
+      "large": "image3.jpg"
+    },
+    "variants": [
+      {
+        "sku": "CoffeeTwo_250g_wholebean",
+        "size": 250,
+        "grind": "wholebean",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_500g_wholebean",
+        "size": 500,
+        "grind": "wholebean",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_1000g_wholebean",
+        "size": 1000,
+        "grind": "wholebean",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_250g_cafetiere",
+        "size": 250,
+        "grind": "cafetiere",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_500g_cafetiere",
+        "size": 500,
+        "grind": "cafetiere",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_1000g_cafetiere",
+        "size": 1000,
+        "grind": "cafetiere",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_250g_filter",
+        "size": 250,
+        "grind": "filter",
+        "price": 5.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_500g_filter",
+        "size": 2500,
+        "grind": "filter",
+        "price": 9.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      },
+      {
+        "sku": "CoffeeTwo_1000g_filter",
+        "size": 1000,
+        "grind": "filter",
+        "price": 18.0,
+        "ordered": 0,
+        "date_added": "10/07/2022"
+      }
+    ]
+  }
+]

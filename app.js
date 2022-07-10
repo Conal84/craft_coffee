@@ -32,11 +32,18 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 
 // Access req.body - Parse JSON bodies (as sent by API clients)
+// Add data from the request body to req.body
 app.use(express.json({ limit: "10kb" }));
 
 // 2) ROUTES
 app.use("/", viewRouter);
 app.use("/basket", basketRouter);
+
+// app.get("/products", (req, res) => {
+//   res.status(200).json({
+//     status: "success",
+//   });
+// });
 
 // Error handling middleware function
 // Express auto calls this when there is an error
