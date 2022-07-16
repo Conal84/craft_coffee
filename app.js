@@ -6,6 +6,7 @@ const cors = require("cors");
 const globalErrorHandler = require("./controllers/errorController");
 const viewRouter = require("./routes/viewRoutes");
 const basketRouter = require("./routes/basketRoutes");
+const productRouter = require("./routes/productRoutes");
 
 const app = express();
 
@@ -38,6 +39,8 @@ app.use(express.json({ limit: "10kb" }));
 // 2) ROUTES
 app.use("/", viewRouter);
 app.use("/basket", basketRouter);
+// API test routes
+app.use("/api/products", productRouter);
 
 // app.get("/products", (req, res) => {
 //   res.status(200).json({
