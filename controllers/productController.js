@@ -60,8 +60,9 @@ exports.getByRoastValue = catchAsync(async (req, res, next) => {
 exports.getBySize = catchAsync(async (req, res, next) => {
   const { value } = req.params;
 
-  //const docs = await Product.find().sort({ size: value });
+  // const docs = await Product.find().sort({ size: value });
   // const docs = await Product.find({}, { variants: 1 }).sort({ size: value });
+  const docs = await Product.find({ "variants.size": value });
 
   res.status(200).json({
     status: "success",
