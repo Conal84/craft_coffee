@@ -18,18 +18,6 @@ exports.updateProduct = factory.updateOne(Product);
 // Delete a product
 exports.deleteProduct = factory.deleteOne(Product);
 
-// Get all product variants
-exports.getAllVariants = catchAsync(async (req, res, next) => {
-  const docs = await Product.find({}, { variants: 1 });
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      data: docs,
-    },
-  });
-});
-
 // Get all by roast value, 1, 2, 3, 4 or 5
 // Roast value = desc => high to low
 // Roast value = asc => low to high
@@ -88,5 +76,23 @@ exports.getByDate = catchAsync(async (req, res, next) => {
     data: {
       data: docs,
     },
+  });
+});
+
+// Get by variant Id
+//router.get("/variant/:value, productController.getByVariantId);
+exports.getByVariantId = catchAsync(async (req, res, next) => {
+  const { value } = req.params;
+
+  const docs = await Product.find(
+    { "variants._id": value },
+    { _id: 0, "variants.$": 1 }
+  );
+
+  const variant = docs[0].variants[0];
+
+  res.status(200).json({
+    status: "success",
+    variant,
   });
 });

@@ -11,9 +11,6 @@ router.post("/", productController.createProduct);
 // Read all products
 router.get("/", productController.getAllProducts);
 
-// Read all product variants
-router.get("/variants", productController.getAllVariants);
-
 // Read one product by Id
 router.get("/:id", productController.getProduct);
 
@@ -32,5 +29,8 @@ router.get("/size/:value", productController.getBySize);
 
 // Read all products and sort by ascending / descending date added
 router.get("/date/:value", productController.getByDate);
+
+// Read all products and sort by ascending / descending date added
+router.get("/variant/:value", productController.getByVariantId);
 
 module.exports = router;
