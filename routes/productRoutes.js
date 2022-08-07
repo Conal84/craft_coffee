@@ -11,6 +11,9 @@ router.post("/", productController.createProduct);
 // Read all products
 router.get("/", productController.getAllProducts);
 
+// Read all products and sort by descending ordered number (Bestsellers)
+router.get("/bestsellers", productController.getBestsellers);
+
 // Read one product by Id
 router.get("/:id", productController.getProduct);
 
@@ -32,5 +35,8 @@ router.get("/date/:value", productController.getByDate);
 
 // Read all products and sort by ascending / descending date added
 router.get("/variant/:value", productController.getByVariantId);
+
+// Read all products and sort by ascending / descending date added
+router.get("/brew-method/:value", productController.getByBrewMethod);
 
 module.exports = router;

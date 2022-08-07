@@ -64,6 +64,7 @@ exports.getBySize = catchAsync(async (req, res, next) => {
 
 // Get all by date added ascending / descending
 //router.get("/date/:value", productController.getByDate);
+// value == asc / desc
 exports.getByDate = catchAsync(async (req, res, next) => {
   const { value } = req.params;
 
@@ -94,5 +95,35 @@ exports.getByVariantId = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: "success",
     variant,
+  });
+});
+
+// Get bestsellers
+//router.get("/bestsellers, productController.getBestsellers);
+exports.getBestsellers = catchAsync(async (req, res, next) => {
+  const docs = await Product.find().sort({ ordered: "desc" }).limit(4);
+
+  res.status(200).json({
+    status: "success",
+    results: docs.length,
+    data: {
+      data: docs,
+    },
+  });
+});
+
+// Get by best brew method
+//router.get("/brew-method/:value, productController.getByBrewMethod);
+exports.getByBrewMethod = catchAsync(async (req, res, next) => {
+  const { value } = req.params;
+
+  const docs = await Product.find({ best_brew_method: value });
+
+  res.status(200).json({
+    status: "success",
+    results: docs.length,
+    data: {
+      data: docs,
+    },
   });
 });

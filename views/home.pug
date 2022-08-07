@@ -16,27 +16,39 @@ block content
         h2.heading-secondary Our Bestsellers 
       hr.hr.home__products__hr
       .home__products__container
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
+        each bestseller in bestsellers
+          .home__products__container__card
+            .card 
+              a.card__link(href=`/product/${bestseller._id}`)
+                .card__top
+                  img.card__top__img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
+                  .card__top__ellipse
+                .card__product
+                  h2.card__product__name.heading-tertiary= bestseller.name
+                  p.card__product__description.paragraph= bestseller.description
+                  hr.hr.hr__sm
+                  .card__product__roast
+                    p.paragraph--italic Roast level
+                    p.paragraph--italic= bestseller.roast
     section.home__products
       .home__products__heading 
         h2.heading-secondary Latest Additions
       hr.hr.home__products__hr
       .home__products__container
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
-        .home__products__container__card
-          include _card
+        each addition in additions
+          .home__products__container__card
+            .card 
+              a.card__link(href=`/product/${addition._id}`)
+                .card__top
+                  img.card__top__img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
+                  .card__top__ellipse
+                .card__product
+                  h2.card__product__name.heading-tertiary= addition.name
+                  p.card__product__description.paragraph= addition.description
+                  hr.hr.hr__sm
+                  .card__product__roast
+                    p.paragraph--italic Roast level
+                    p.paragraph--italic= addition.roast
     section.home__collage 
       .home__collage__image.home__collage__about
         h3.home__collage__text.heading-secondary Our Story

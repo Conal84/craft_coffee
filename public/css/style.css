@@ -123,20 +123,22 @@ body {
     border-radius: 0 0 5rem 5rem;
     height: 40%;
     display: flex;
-    flex-direction: column;
-    align-items: center; }
+    flex-direction: column; }
     .card__product__name {
       color: #422417;
       text-transform: uppercase;
       font-weight: bold;
-      padding-top: 1rem; }
+      padding-top: 1rem;
+      align-self: center; }
     .card__product__description {
       color: #999;
-      padding: 1rem 5rem 0 5rem;
-      align-self: flex-start; }
-    .card__product__price {
-      padding-left: 5rem;
-      align-self: flex-start; }
+      padding: 1rem 1rem 0 1rem;
+      align-self: center; }
+    .card__product__roast {
+      width: 60%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between; }
 
 .form input {
   border-radius: 0.5rem;

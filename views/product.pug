@@ -7,7 +7,7 @@ block content
     .product__info
       form.product__form(name='productForm' onsubmit='basketAdd()')
         .product__nameBg
-          .product__name.heading-secondary Coffee Name
+          .product__name.heading-secondary= product.name
         .product__size.heading-tertiary Size
         input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price='£6.50' checked='')
         input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price='£12.50')
