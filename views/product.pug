@@ -4,22 +4,22 @@ block content
   .product 
     .product__img
       img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
-    .product__info
+    .product__info(data-productId= product.id data-variantId = product.variants[0].id)
       form.product__form(name='productForm' onsubmit='basketAdd()')
         .product__nameBg
           .product__name.heading-secondary= product.name
         .product__size.heading-tertiary Size
-        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price='£6.50' checked='')
-        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price='£12.50')
-        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price='£24.50')
+        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price=`£${product.variants[0].price}` checked='' onclick='getVariant()')
+        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price=`£${product.variants[1].price}` onclick='getVariant()')
+        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price=`£${product.variants[2].price}` onclick='getVariant()')
         hr.hr__sm.hr--roast
         .product__roast.heading-tertiary Roast 
         .product__description.paragraph Lorem ipsum dolor sit amet
         hr.hr__sm.hr--grind
         .product__grind.heading-tertiary Grind
-        input.paragraph.product__grind--whole(label='Wholebean' type='radio' id='wholebean' name='grind' value='Wholebean' checked='')
-        input.paragraph.product__grind--cafe(label='Cafetiere' type='radio' id='cafetiere' name='grind' value='Cafetiere')
-        input.paragraph.product__grind--filter(label='Filter' type='radio' id='filter' name='grind' value='Filter')
+        input.paragraph.product__grind--whole(label='Wholebean' type='radio' id='wholebean' name='grind' value='Wholebean' checked='' onclick='getVariant()')
+        input.paragraph.product__grind--cafe(label='Cafetiere' type='radio' id='cafetiere' name='grind' value='Cafetiere' onclick='getVariant()')
+        input.paragraph.product__grind--filter(label='Filter' type='radio' id='filter' name='grind' value='Filter' onclick='getVariant()')
         .product__submitContainer
           input.product__submit.btn.btn--cta(type='submit' value='Add to basket')
           label(for='quantity') Qty:
@@ -29,4 +29,4 @@ block content
             option(value='3') 3
             option(value='4') 4
             option(value='5') 5
-      script(src='/js/basket.js')
+      script(src='/js/product.js')

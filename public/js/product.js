@@ -24,3 +24,12 @@ function basketAdd() {
     localStorage.setItem("basket", JSON.stringify(item));
   }
 }
+
+function getVariant() {
+  let size = document.querySelector('input[name="size"]:checked').value;
+  let grind = document.querySelector('input[name="grind"]:checked').value;
+  let id = document.querySelector(".product__info");
+  let value = id.dataset.productid;
+  console.log(id);
+  console.log(`Product id is; ${value}, Variant is ${grind}, ${size}`);
+}
