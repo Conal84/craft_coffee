@@ -9,17 +9,17 @@ block content
         .product__nameBg
           .product__name.heading-secondary= product.name
         .product__size.heading-tertiary Size
-        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price=`£${product.variants[0].price}` checked='' onclick='getVariant()')
-        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price=`£${product.variants[1].price}` onclick='getVariant()')
-        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price=`£${product.variants[2].price}` onclick='getVariant()')
+        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price=`£${product.variants[0].price}` checked='')
+        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price=`£${product.variants[1].price}`)
+        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price=`£${product.variants[2].price}`)
         hr.hr__sm.hr--roast
         .product__roast.heading-tertiary Roast 
         .product__description.paragraph Lorem ipsum dolor sit amet
         hr.hr__sm.hr--grind
         .product__grind.heading-tertiary Grind
-        input.paragraph.product__grind--whole(label='Wholebean' type='radio' id='wholebean' name='grind' value='Wholebean' checked='' onclick='getVariant()')
-        input.paragraph.product__grind--cafe(label='Cafetiere' type='radio' id='cafetiere' name='grind' value='Cafetiere' onclick='getVariant()')
-        input.paragraph.product__grind--filter(label='Filter' type='radio' id='filter' name='grind' value='Filter' onclick='getVariant()')
+        input.paragraph.product__grind--whole(label='Wholebean' type='radio' id='wholebean' name='grind' value='Wholebean' checked='' onclick='updateVariants(this.id)')
+        input.paragraph.product__grind--cafe(label='Cafetiere' type='radio' id='cafetiere' name='grind' value='Cafetiere' onclick='updateVariants(this.id)')
+        input.paragraph.product__grind--filter(label='Filter' type='radio' id='filter' name='grind' value='Filter' onclick='updateVariants(this.id)')
         .product__submitContainer
           input.product__submit.btn.btn--cta(type='submit' value='Add to basket')
           label(for='quantity') Qty:
@@ -30,3 +30,21 @@ block content
             option(value='4') 4
             option(value='5') 5
       script(src='/js/product.js')
+      script.
+        let variants = !{JSON.stringify(product.variants)};
+        console.log(variants);
+
+        function updateVariants(clicked_id) {
+          let i;
+
+          if(clicked_id == 'wholebean'){
+            i = 0;
+          }else if(clicked_id == 'cafetiere'){
+            i = 3;
+          }else{
+            i = 6;
+          }
+          document.getElementById('250').dataset.price = `£${variants[i].price}`;
+          document.getElementById('500').dataset.price = `£${variants[i + 1].price}`;
+          document.getElementById('1000').dataset.price = `£${variants[i + 2].price}`;
+        }

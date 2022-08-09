@@ -31,7 +31,7 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 
   // 3) Render the template using product data
   res.status(200).render("product", {
-    title: "Product",
+    title: product.name,
     product,
   });
 });
