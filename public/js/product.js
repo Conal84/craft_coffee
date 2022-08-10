@@ -1,12 +1,21 @@
 function basketAdd() {
+  let productId = document.querySelector(".product__info").dataset.productid;
   let checked = document.querySelector('input[name="size"]:checked');
+  let variantId = checked.dataset.variantid;
   let size = checked.value;
   let price = checked.dataset.price;
   let grind = document.querySelector('input[name="grind"]:checked').value;
   let qty = document.querySelector("#quantity").value;
 
   // Create item object
-  let item = { size: size, price: price, grind: grind, qty: qty };
+  let item = {
+    productId: productId,
+    variantId: variantId,
+    size: size,
+    price: price,
+    grind: grind,
+    qty: qty,
+  };
 
   // 1) Check if basket exists in local storage
   if (localStorage.getItem("basket")) {
@@ -24,12 +33,3 @@ function basketAdd() {
     localStorage.setItem("basket", JSON.stringify(item));
   }
 }
-
-// function getVariant() {
-//   let size = document.querySelector('input[name="size"]:checked').value;
-//   let grind = document.querySelector('input[name="grind"]:checked').value;
-//   let id = document.querySelector(".product__info");
-//   let value = id.dataset.productid;
-//   console.log(id);
-//   console.log(`Product id is; ${value}, Variant is ${grind}, ${size}`);
-// }

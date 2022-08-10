@@ -58,7 +58,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         default: "Wholebean",
       },
-      price: Number,
+      price: mongoose.Schema.Types.Decimal128,
     },
   ],
 });

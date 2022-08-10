@@ -4,14 +4,14 @@ block content
   .product 
     .product__img
       img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
-    .product__info(data-productId= product.id data-variantId = product.variants[0].id)
+    .product__info(data-productId= product.id)
       form.product__form(name='productForm' onsubmit='basketAdd()')
         .product__nameBg
           .product__name.heading-secondary= product.name
         .product__size.heading-tertiary Size
-        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price=`£${product.variants[0].price}` checked='')
-        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price=`£${product.variants[1].price}`)
-        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price=`£${product.variants[2].price}`)
+        input.paragraph.product__size--250(label=' 250g' type='radio' id='250' name='size' value='250g' data-price=`£${product.variants[0].price}` data-variantId= product.variants[0].id checked='')
+        input.paragraph.product__size--500(label='  500g' type='radio' id='500' name='size' value='500g' data-price=`£${product.variants[1].price}` data-variantId= product.variants[1].id)
+        input.paragraph.product__size--1000(label='  1kg' type='radio' id='1000' name='size' value='1kg' data-price=`£${product.variants[2].price}` data-variantId= product.variants[2].id)
         hr.hr__sm.hr--roast
         .product__roast.heading-tertiary Roast 
         .product__description.paragraph Lorem ipsum dolor sit amet
@@ -32,7 +32,6 @@ block content
       script(src='/js/product.js')
       script.
         let variants = !{JSON.stringify(product.variants)};
-        console.log(variants);
 
         function updateVariants(clicked_id) {
           let i;
@@ -44,7 +43,18 @@ block content
           }else{
             i = 6;
           }
-          document.getElementById('250').dataset.price = `£${variants[i].price}`;
-          document.getElementById('500').dataset.price = `£${variants[i + 1].price}`;
-          document.getElementById('1000').dataset.price = `£${variants[i + 2].price}`;
+
+          let variant250 = document.getElementById('250');
+          let variant500 = document.getElementById('500');
+          let variant1000 = document.getElementById('1000');
+
+          //- Set variant data attributes
+          variant250.dataset.price = `£${variants[i].price.$numberDecimal}`;
+          variant250.dataset.variantid = variants[i]._id;
+
+          variant500.dataset.price = `£${variants[i + 1].price.$numberDecimal}`;
+          variant500.dataset.variantid = variants[i + 1]._id;
+
+          variant1000.dataset.price = `£${variants[i + 2].price.$numberDecimal}`;
+          variant1000.dataset.variantid = variants[i + 2]._id;
         }
