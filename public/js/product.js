@@ -1,5 +1,6 @@
 function basketAdd() {
   let productId = document.querySelector(".product__info").dataset.productid;
+  let productName = document.querySelector(".product__name").textContent;
   let checked = document.querySelector('input[name="size"]:checked');
   let variantId = checked.dataset.variantid;
   let size = checked.value;
@@ -10,6 +11,7 @@ function basketAdd() {
   // Create item object
   let item = {
     productId: productId,
+    productName: productName,
     variantId: variantId,
     size: size,
     price: price,
