@@ -39,6 +39,7 @@ app.use(express.json({ limit: "10kb" }));
 // 2) ROUTES
 app.use("/", viewRouter);
 app.use("/basket", basketRouter);
+
 // API test routes
 app.use("/api/products", productRouter);
 

@@ -24,7 +24,7 @@ exports.getProduct = catchAsync(async (req, res, next) => {
   // 1) Get the individual product
   const product = await Product.findById(req.params.id);
 
-  // 2) Handle and product search errors
+  // 2) Handle any product search errors
   if (!product) {
     return next(new AppError("There is no product with that name", 404));
   }
@@ -37,17 +37,24 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 });
 
 // Render shop page
-exports.getShop = (req, res, next) => {
+exports.getShop = catchAsync(async (req, res, next) => {
+  let filter;
+  let products;
+
+  // 1) Check the url parameter
+  if (req.params.filter == "all") {
+    // 2) Get bestsellers
+    products = await Product.find().sort({ ordered: "desc" }).limit(8);
+    filter = "Bestsellers";
+  }
+
+  // Render the template using bestseller data
   res.status(200).render("shop", {
     title: "Shop",
+    filter,
+    products,
   });
-};
-
-const products = JSON.parse(
-  fs.readFileSync(
-    `/Users/conalwalsh/Code/Craft Coffee/dev-data/data/products.json`
-  )
-);
+});
 
 // exports.getProducts = (req, res, next) => {
 //   if (req.method === "POST") {

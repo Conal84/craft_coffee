@@ -4,14 +4,20 @@ block content
   .shop
     .shop-head
       a.btn.btn--primary.btn--filter(href=`#`) Filter
-      h2.heading-secondary.heading-shop Our Bestsellers 
+      h2.heading-secondary.heading-shop= filter 
       a.btn.btn--secondary.btn--sort(href=`#`) Sort by
     hr.hr
     .shop-products
-      include _card
-      include _card
-      include _card
-      include _card
-      include _card
-      include _card
-      include _card
+      each product in products
+        .card 
+          a.card__link(href=`/product/${product._id}`)
+            .card__top
+              img.card__top__img(src='../img/Roma_Espresso_Blend.png' alt='Product image')
+              .card__top__ellipse
+            .card__product
+              h2.card__product__name.heading-tertiary= product.name
+              p.card__product__description.paragraph= product.description
+              hr.hr.hr__sm
+              .card__product__roast
+                p.paragraph--italic Roast level
+                p.paragraph--italic= product.roast
