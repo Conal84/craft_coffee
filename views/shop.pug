@@ -3,15 +3,19 @@ extends base
 block content 
   .shop
     .shop-head
-      a.btn.btn--primary.dropdown--filter(href=`#`) Filter
+      .dropdown.dropdown--filter
+        button.dropdown__btn Filter 
+        .dropdown__content
+          a.dropdown__link(href='#') Roast
+          a.dropdown__link(href='#') Price
       h2.heading-secondary.heading-shop= filter 
       .dropdown.dropdown--sort
         button.dropdown__btn Sort by 
-        .dropdown__content 
-          a.dropdown__link(href='#') Bestsellers
-          a.dropdown__link(href='#') Roast high to low
-          a.dropdown__link(href='#') Roast low to high 
-          a.dropdown__link(href='#') Latest added 
+        .dropdown__content.dropdown__content--right
+          a.dropdown__link(href='/shop/all') Bestsellers
+          a.dropdown__link(href='/shop/roast?level=desc') Roast high to low
+          a.dropdown__link(href='/shop/roast?level=asc') Roast low to high 
+          a.dropdown__link(href='/shop/latest') Latest added 
           a.dropdown__link(href='#') Brew method - Wholebean
           a.dropdown__link(href='#') Brew method - Cafetiere
           a.dropdown__link(href='#') Brew method - Filter

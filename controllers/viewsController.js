@@ -42,10 +42,27 @@ exports.getShop = catchAsync(async (req, res, next) => {
   let products;
 
   // 1) Check the url parameter
+  // /shop/all
   if (req.params.filter == "all") {
     // 2) Get bestsellers
     products = await Product.find().sort({ ordered: "desc" }).limit(8);
     filter = "Bestsellers";
+  }
+
+  //shop/roast?level=desc
+  //shop/roast?level=asc
+  if (req.params.filter == "roast") {
+    // 2) Get by roast level high to low
+    const level = req.query.level;
+
+    products = await Product.find().sort({ roast: level });
+    filter = "Roast Level";
+  }
+
+  if (req.params.filter == "latest") {
+    // 2) Get by latest added
+    products = await Product.find().sort({ dateAdded: "desc" });
+    filter = "Latest Added";
   }
 
   // Render the template using bestseller data
