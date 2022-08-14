@@ -117,7 +117,7 @@ exports.getBestsellers = catchAsync(async (req, res, next) => {
 exports.getByBrewMethod = catchAsync(async (req, res, next) => {
   const { value } = req.params;
 
-  const docs = await Product.find({ best_brew_method: value });
+  const docs = await Product.find({ bestBrew: value });
 
   res.status(200).json({
     status: "success",

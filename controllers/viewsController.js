@@ -38,37 +38,31 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 
 // Render shop page
 exports.getShop = catchAsync(async (req, res, next) => {
-  let filter;
   let products;
+  let heading;
+  console.log(req.query);
 
-  // 1) Check the url parameter
-  // /shop/all
-  if (req.params.filter == "all") {
-    // 2) Get bestsellers
-    products = await Product.find().sort({ ordered: "desc" }).limit(8);
-    filter = "Bestsellers";
-  }
+  products = await Product.find().sort(req.query);
+  let reqType = Object.keys(req.query)[0];
 
-  //shop/roast?level=desc
-  //shop/roast?level=asc
-  if (req.params.filter == "roast") {
-    // 2) Get by roast level high to low
-    const level = req.query.level;
-
-    products = await Product.find().sort({ roast: level });
-    filter = "Roast Level";
-  }
-
-  if (req.params.filter == "latest") {
-    // 2) Get by latest added
-    products = await Product.find().sort({ dateAdded: "desc" });
-    filter = "Latest Added";
-  }
+  // switch (reqType) {
+  //   case "ordered":
+  //     heading = "Bestsellers";
+  //     break;
+  //   case "roast":
+  //     heading = "Roast Level";
+  //     break;
+  //   case "dateAdded":
+  //     heading = "Latest Added";
+  //     break;
+  //   case "bestBrew":
+  //     heading = "Brew Method";
+  // }
 
   // Render the template using bestseller data
   res.status(200).render("shop", {
     title: "Shop",
-    filter,
+    heading,
     products,
   });
 });
