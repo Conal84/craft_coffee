@@ -8,9 +8,7 @@ const router = express.Router();
 
 router.get("/", viewController.getHome);
 router.get("/product/:id", viewController.getProduct);
-router.get("/shop", viewController.getShop);
-//router.get("/products", viewController.getProducts);
-//router.post("/products", viewController.getProducts);
+//router.get("/shop", viewController.getShop);
 router.get("/basket", viewController.getBasket);
 
 module.exports = router;

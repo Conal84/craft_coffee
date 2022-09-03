@@ -8,17 +8,17 @@ block content
         .dropdown__content
           a.dropdown__link(href='#') Roast
           a.dropdown__link(href='#') Price
+          a.dropdown__link(href='/shop?bestBrew=wholebean') Brew method - Wholebean
+          a.dropdown__link(href='/shop?bestBrew=cafetiere') Brew method - Cafetiere
+          a.dropdown__link(href='/shop?bestBrew=filter') Brew method - Filter
       h2.heading-secondary.heading-shop= heading 
       .dropdown.dropdown--sort
         button.dropdown__btn Sort by 
         .dropdown__content.dropdown__content--right
-          a.dropdown__link(href='/shop?ordered=desc') Bestsellers
-          a.dropdown__link(href='/shop?roast=desc') Roast high to low
-          a.dropdown__link(href='/shop?roast=asc') Roast low to high 
-          a.dropdown__link(href='/shop?dateAdded=desc') Latest added 
-          a.dropdown__link(href='/shop?bestBrew=wholebean') Brew method - Wholebean
-          a.dropdown__link(href='/shop?bestBrew=cafetiere') Brew method - Cafetiere
-          a.dropdown__link(href='/shop?bestBrew=filter') Brew method - Filter
+          a.dropdown__link(href='/shop?sort=-ordered') Bestsellers
+          a.dropdown__link(href='/shop?sort=-roast') Roast high to low
+          a.dropdown__link(href='/shop?sort=roast') Roast low to high 
+          a.dropdown__link(href='/shop?sort=dateAdded') Latest added
     hr.hr
     .shop-products
       each product in products

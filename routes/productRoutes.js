@@ -14,6 +14,8 @@ router.get("/", productController.getAllProducts);
 // Read all products and sort by descending ordered number (Bestsellers)
 router.get("/bestsellers", productController.getBestsellers);
 
+router.get("/shop", productController.getShop);
+
 // Read one product by Id
 router.get("/:id", productController.getProduct);
 

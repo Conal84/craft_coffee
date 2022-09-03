@@ -38,49 +38,44 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 
 // Render shop page
 exports.getShop = catchAsync(async (req, res, next) => {
-  let products;
-  let heading;
-  console.log(req.query);
+  console.log(JSON.stringify(req.query));
 
-  products = await Product.find().sort(req.query);
-  let reqType = Object.keys(req.query)[0];
+  // 1) Filtering
+  let query = Product.find(req.query);
+
+  // 2) Sorting
+  if (req.query.sort) {
+    query = query.sort(req.query.sort);
+  }
+
+  // Execute the query
+  const products = await query;
+
+  // let heading;
+  // console.log(req.query);
+
+  // let reqType = Object.keys(req.query)[0];
 
   // switch (reqType) {
   //   case "ordered":
+  //     products = await Product.find().sort(req.query).limit(6);
   //     heading = "Bestsellers";
   //     break;
   //   case "roast":
+  //     products = await Product.find().sort(req.query);
   //     heading = "Roast Level";
   //     break;
   //   case "dateAdded":
+  //     products = await Product.find().sort(req.query).limit(6);
   //     heading = "Latest Added";
-  //     break;
-  //   case "bestBrew":
-  //     heading = "Brew Method";
   // }
 
-  // Render the template using bestseller data
+  // Render the template using data
   res.status(200).render("shop", {
     title: "Shop",
-    heading,
     products,
   });
 });
-
-// exports.getProducts = (req, res, next) => {
-//   if (req.method === "POST") {
-//     console.log(req.body);
-//     res.send("Done");
-//   } else {
-//     res.status(200).json({
-//       status: "success",
-//       results: products.length,
-//       data: {
-//         products,
-//       },
-//     });
-//   }
-// };
 
 // Render basket page
 exports.getBasket = (req, res, next) => {
