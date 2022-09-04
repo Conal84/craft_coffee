@@ -6,8 +6,23 @@ block content
       .dropdown.dropdown--filter
         button.dropdown__btn Filter 
         .dropdown__content
-          a.dropdown__link(href='#') Roast
-          a.dropdown__link(href='#') Price
+          form(action=`${currentUrl}`)
+            p Select roast level 
+            input#level1(type='radio' name='roast' value='1' onclick='this.form.submit()')
+            label(for='level1') Light 
+            br
+            input#level2(type='radio' name='roast' value='2' onclick='this.form.submit()')
+            label(for='level2') Light - Medium
+            br
+            input#level3(type='radio' name='roast' value='3' onclick='this.form.submit()')
+            label(for='level3') Medium
+            br
+            input#level4(type='radio' name='roast' value='4' onclick='this.form.submit()')
+            label(for='level4') Medium - Dark
+            br
+            input#level5(type='radio' name='roast' value='5' onclick='this.form.submit()')
+            label(for='level5') Dark 
+            br
           a.dropdown__link(href='/shop?bestBrew=wholebean') Brew method - Wholebean
           a.dropdown__link(href='/shop?bestBrew=cafetiere') Brew method - Cafetiere
           a.dropdown__link(href='/shop?bestBrew=filter') Brew method - Filter
@@ -16,9 +31,9 @@ block content
         button.dropdown__btn Sort by 
         .dropdown__content.dropdown__content--right
           a.dropdown__link(href='/shop?sort=-ordered') Bestsellers
-          a.dropdown__link(href='/shop?sort=-roast') Roast high to low
-          a.dropdown__link(href='/shop?sort=roast') Roast low to high 
-          a.dropdown__link(href='/shop?sort=dateAdded') Latest added
+          a.dropdown__link(href='/shop?sort=-roast,-ordered') Roast high to low
+          a.dropdown__link(href='/shop?sort=roast,-ordered') Roast low to high 
+          a.dropdown__link(href='/shop?sort=-dateAdded') Latest added
     hr.hr
     .shop-products
       each product in products
@@ -34,3 +49,5 @@ block content
               .card__product__roast
                 p.paragraph--italic Roast level
                 p.paragraph--italic= product.roast
+  script.
+    let currentUrl = window.location.href;

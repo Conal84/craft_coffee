@@ -19,7 +19,7 @@ const productSchema = new mongoose.Schema({
     min: [1, "Roast level minimum is 1"],
     max: [5, "Roast level maximum is 5"],
   },
-  best_brew_method: {
+  bestBrew: {
     type: String,
     enum: {
       values: ["wholebean", "cafetiere", "filter"],

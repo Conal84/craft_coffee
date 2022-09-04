@@ -38,14 +38,13 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 
 // Render shop page
 exports.getShop = catchAsync(async (req, res, next) => {
-  console.log(JSON.stringify(req.query));
-
   // 1) Filtering
   let query = Product.find(req.query);
 
   // 2) Sorting
   if (req.query.sort) {
-    query = query.sort(req.query.sort);
+    const sortBy = req.query.sort.split(",").join(" ");
+    query = query.sort(sortBy);
   }
 
   // Execute the query
