@@ -87,6 +87,9 @@ exports.getShop = catchAsync(async (req, res, next) => {
 
 // Render basket page
 exports.getBasket = (req, res, next) => {
+  //let basket = localStorage.getItem(basket);
+  //console.log(basket);
+
   res.status(200).render("basket", {
     title: "Basket",
   });

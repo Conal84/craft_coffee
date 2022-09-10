@@ -127,29 +127,3 @@ exports.getByBrewMethod = catchAsync(async (req, res, next) => {
     },
   });
 });
-
-// Get products Filter, Sort, Limit
-// exports.getShop = catchAsync(async (req, res, next) => {
-//   console.log(JSON.stringify(req.query));
-
-//   // 1) Filtering
-//   let query = Product.find(req.query);
-
-//   // 2) Sorting
-//   if (req.query.sort) {
-//     const sortBy = req.query.sort.split(",").join(" ");
-//     query = query.sort(sortBy);
-//   }
-
-//   // Execute the query
-//   const docs = await query;
-
-//   // Render the template using data
-//   res.status(200).json({
-//     status: "success",
-//     results: docs.length,
-//     data: {
-//       data: docs,
-//     },
-//   });
-// });
