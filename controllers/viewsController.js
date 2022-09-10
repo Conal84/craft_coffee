@@ -38,41 +38,50 @@ exports.getProduct = catchAsync(async (req, res, next) => {
 
 // Render shop page
 exports.getShop = catchAsync(async (req, res, next) => {
-  // 1) Filtering
+  // /shop?sort=-ordered&roast=3
   let query = Product.find(req.query);
+  let currentSort = req.query.sort;
 
-  // 2) Sorting
-  if (req.query.sort) {
-    const sortBy = req.query.sort.split(",").join(" ");
-    query = query.sort(sortBy);
-  }
+  // 1) Sort
+  const sortBy = req.query.sort.split(",").join(" ");
+  query = query.sort(sortBy);
 
   // Execute the query
   const products = await query;
 
-  // let heading;
-  // console.log(req.query);
+  let heading;
+  let reqType = req.query.sort;
 
-  // let reqType = Object.keys(req.query)[0];
+  switch (reqType) {
+    case "-ordered":
+      heading = "Bestsellers";
+      break;
+    case "-roast,-ordered":
+      heading = "Roast High to Low";
+      break;
+    case "roast,-ordered":
+      heading = "Roast Low to High";
+      break;
+    case "-dateAdded":
+      heading = "Latest Added";
+  }
 
-  // switch (reqType) {
-  //   case "ordered":
-  //     products = await Product.find().sort(req.query).limit(6);
-  //     heading = "Bestsellers";
-  //     break;
-  //   case "roast":
-  //     products = await Product.find().sort(req.query);
-  //     heading = "Roast Level";
-  //     break;
-  //   case "dateAdded":
-  //     products = await Product.find().sort(req.query).limit(6);
-  //     heading = "Latest Added";
-  // }
+  let filter;
+  if (req.query.roast) {
+    filter = `Roast level - ${req.query.roast}`;
+  }
+
+  if (req.query.bestBrew) {
+    filter = `Brew method - ${req.query.bestBrew}`;
+  }
 
   // Render the template using data
   res.status(200).render("shop", {
     title: "Shop",
     products,
+    currentSort,
+    heading,
+    filter,
   });
 });
 

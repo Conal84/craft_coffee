@@ -816,18 +816,17 @@ label[for="quantity"] {
 .shop {
   min-height: calc(100vh - 10rem);
   display: grid;
-  grid-template-rows: 200px max-content max-content;
-  grid-gap: 2rem; }
+  grid-template-rows: 200px max-content max-content; }
 
 .shop-head {
   display: grid;
-  grid-template-rows: 2;
+  grid-template-rows: 3;
   grid-template-columns: 2;
   padding-top: 3rem;
   /*Tablet and above Portrait View - 700px and above*/ }
   @media screen and (min-width: 700px) {
     .shop-head {
-      grid-template-rows: 1;
+      grid-template-rows: 2;
       grid-template-columns: 3; } }
 
 .dropdown--filter {
@@ -857,6 +856,17 @@ label[for="quantity"] {
   @media screen and (min-width: 700px) {
     .heading-shop {
       grid-row: 1;
+      grid-column: 2; } }
+
+.heading-filter {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  align-self: center;
+  /*Tablet and above Portrait View - 700px and above*/ }
+  @media screen and (min-width: 700px) {
+    .heading-filter {
+      grid-row: 2;
       grid-column: 2; } }
 
 .shop-products {

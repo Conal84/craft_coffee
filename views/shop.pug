@@ -6,27 +6,18 @@ block content
       .dropdown.dropdown--filter
         button.dropdown__btn Filter 
         .dropdown__content
-          form(action=`${currentUrl}`)
-            p Select roast level 
-            input#level1(type='radio' name='roast' value='1' onclick='this.form.submit()')
-            label(for='level1') Light 
-            br
-            input#level2(type='radio' name='roast' value='2' onclick='this.form.submit()')
-            label(for='level2') Light - Medium
-            br
-            input#level3(type='radio' name='roast' value='3' onclick='this.form.submit()')
-            label(for='level3') Medium
-            br
-            input#level4(type='radio' name='roast' value='4' onclick='this.form.submit()')
-            label(for='level4') Medium - Dark
-            br
-            input#level5(type='radio' name='roast' value='5' onclick='this.form.submit()')
-            label(for='level5') Dark 
-            br
-          a.dropdown__link(href='/shop?bestBrew=wholebean') Brew method - Wholebean
-          a.dropdown__link(href='/shop?bestBrew=cafetiere') Brew method - Cafetiere
-          a.dropdown__link(href='/shop?bestBrew=filter') Brew method - Filter
-      h2.heading-secondary.heading-shop= heading 
+          a.dropdown__link(href=`/shop?sort=${currentSort}&roast=1`) Roast 1
+          a.dropdown__link(href=`/shop?sort=${currentSort}&roast=2`) Roast 2
+          a.dropdown__link(href=`/shop?sort=${currentSort}&roast=3`) Roast 3
+          a.dropdown__link(href=`/shop?sort=${currentSort}&roast=4`) Roast 4
+          a.dropdown__link(href=`/shop?sort=${currentSort}&roast=5`) Roast 5
+          a.dropdown__link(href=`/shop?sort=${currentSort}&bestBrew=wholebean`) Brew method - Wholebean
+          a.dropdown__link(href=`/shop?sort=${currentSort}&bestBrew=cafetiere`) Brew method - Cafetiere
+          a.dropdown__link(href=`/shop?sort=${currentSort}&bestBrew=filter`) Brew method - Filter
+          a.dropdown__link(href='/shop?sort=-ordered') Remove filters
+      h2.heading-secondary.heading-shop= heading
+      if filter
+        h3.heading-tertiary.heading-filter= filter
       .dropdown.dropdown--sort
         button.dropdown__btn Sort by 
         .dropdown__content.dropdown__content--right
@@ -49,5 +40,3 @@ block content
               .card__product__roast
                 p.paragraph--italic Roast level
                 p.paragraph--italic= product.roast
-  script.
-    let currentUrl = window.location.href;
